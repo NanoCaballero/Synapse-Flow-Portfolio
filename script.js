@@ -3,23 +3,26 @@
    script.js — JavaScript vanilla (sin dependencias)
    --------------------------------------------------------------------------
    El sitio funciona aunque este archivo no cargue. El JS solo MEJORA la
-   navegación: menú móvil, resaltado de sección activa y botón "volver arriba".
+   experiencia: menú móvil, sección activa, revelado al hacer scroll, entrada
+   escalonada del hero y botón "volver arriba".
    ========================================================================= */
 (function () {
   "use strict";
 
-  /* ---------- 1. Menú móvil (hamburguesa) ---------- */
+  // Marca que hay JS disponible (habilita los estados ocultos de .reveal en CSS)
+  document.documentElement.classList.add("js");
+
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- 1. Menú móvil ---------- */
   var toggle = document.querySelector(".nav-toggle");
   var navLinks = document.querySelector(".nav-links");
-
   if (toggle && navLinks) {
     toggle.addEventListener("click", function () {
-      var isOpen = navLinks.classList.toggle("open");
-      toggle.classList.toggle("open", isOpen);
-      toggle.setAttribute("aria-expanded", String(isOpen));
+      var open = navLinks.classList.toggle("open");
+      toggle.classList.toggle("open", open);
+      toggle.setAttribute("aria-expanded", String(open));
     });
-
-    // Cerrar el menú al hacer clic en un enlace (en móvil)
     navLinks.addEventListener("click", function (e) {
       if (e.target.tagName === "A") {
         navLinks.classList.remove("open");
@@ -29,44 +32,68 @@
     });
   }
 
-  /* ---------- 2. Resaltar sección activa en la navbar ---------- */
+  /* ---------- 2. Sección activa en la navbar ---------- */
   var sections = document.querySelectorAll("section[id]");
   var linkMap = {};
   document.querySelectorAll('.nav-links a[href^="#"]').forEach(function (a) {
     linkMap[a.getAttribute("href").slice(1)] = a;
   });
-
   if ("IntersectionObserver" in window && sections.length) {
-    var observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            var id = entry.target.id;
-            Object.keys(linkMap).forEach(function (key) {
-              linkMap[key].classList.toggle("active", key === id);
-            });
-          }
-        });
-      },
-      { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
-    );
-    sections.forEach(function (s) { observer.observe(s); });
+    var navObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var id = entry.target.id;
+          Object.keys(linkMap).forEach(function (k) {
+            linkMap[k].classList.toggle("active", k === id);
+          });
+        }
+      });
+    }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+    sections.forEach(function (s) { navObs.observe(s); });
   }
 
-  /* ---------- 3. Botón "volver arriba" ---------- */
+  /* ---------- 3. Revelado al hacer scroll (con escalonado) ---------- */
+  if (!reduceMotion && "IntersectionObserver" in window) {
+    var selectors = [
+      ".section__head", ".card", ".pipeline__step", ".table-wrap",
+      ".node-chip", ".team-card", ".link-group", ".diagram", ".callout",
+      ".hero__badge", ".hero h1", ".hero__subtitle", ".hero__tagline",
+      ".hero__desc", ".hero__buttons", ".hero__panel", ".subhead"
+    ];
+    var revealEls = document.querySelectorAll(selectors.join(","));
+    revealEls.forEach(function (el) { el.classList.add("reveal"); });
+
+    var revObs = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var el = entry.target;
+          // delay según posición entre hermanos que también se revelan
+          var sibs = Array.prototype.filter.call(el.parentElement.children, function (c) {
+            return c.classList.contains("reveal");
+          });
+          var idx = sibs.indexOf(el);
+          el.style.transitionDelay = (Math.min(idx, 6) * 70) + "ms";
+          el.classList.add("is-visible");
+          obs.unobserve(el);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+
+    revealEls.forEach(function (el) { revObs.observe(el); });
+  }
+
+  /* ---------- 4. Botón "volver arriba" ---------- */
   var toTop = document.querySelector(".to-top");
   if (toTop) {
-    var onScroll = function () {
-      toTop.classList.toggle("show", window.scrollY > 600);
-    };
+    var onScroll = function () { toTop.classList.toggle("show", window.scrollY > 640); };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
     toTop.addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
     });
   }
 
-  /* ---------- 4. Año dinámico en el footer (opcional) ---------- */
+  /* ---------- 5. Año dinámico en el footer ---------- */
   var yearEl = document.querySelector("[data-year]");
   if (yearEl) { yearEl.textContent = String(new Date().getFullYear()); }
 })();

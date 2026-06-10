@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="320" viewBox="0 0 720 320" role="img" aria-label="Diagrama placeholder del pipeline Definir, Compilar, Ejecutar">
+  <rect width="720" height="320" rx="20" fill="#FBF8FF" stroke="#E5D1FF" stroke-width="2"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="360" y="44" font-size="18" font-weight="bold" fill="#2D123F">Definir &#8594; Compilar &#8594; Ejecutar</text>
+    <g font-size="15">
+      <rect x="60"  y="110" width="170" height="90" rx="14" fill="#F3E8FF" stroke="#9517F2" stroke-width="2"/>
+      <text x="145" y="150" fill="#2D123F" font-weight="bold">Definir</text>
+      <text x="145" y="174" fill="#5E5368" font-size="12">Grafo de nodos</text>
+
+      <rect x="275" y="110" width="170" height="90" rx="14" fill="#9517F2"/>
+      <text x="360" y="150" fill="#FFFFFF" font-weight="bold">Compilar</text>
+      <text x="360" y="174" fill="#F3E8FF" font-size="12">Validar y ordenar</text>
+
+      <rect x="490" y="110" width="170" height="90" rx="14" fill="#2D123F"/>
+      <text x="575" y="150" fill="#FFFFFF" font-weight="bold">Ejecutar</text>
+      <text x="575" y="174" fill="#E5D1FF" font-size="12">Runtime de agentes</text>
+    </g>
+    <g stroke="#6B2FA0" stroke-width="3" fill="#6B2FA0">
+      <line x1="230" y1="155" x2="270" y2="155"/>
+      <polygon points="270,150 280,155 270,160"/>
+      <line x1="445" y1="155" x2="485" y2="155"/>
+      <polygon points="485,150 495,155 485,160"/>
+    </g>
+    <text x="360" y="280" font-size="13" fill="#5E5368">WORKFLOW PLACEHOLDER · reemplazar con captura del canvas</text>
+  </g>
+</svg>

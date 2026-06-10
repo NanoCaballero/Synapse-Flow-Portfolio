@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="420" viewBox="0 0 720 420" role="img" aria-label="Diagrama placeholder de arquitectura de microservicios de Synapse-Flow">
+  <rect width="720" height="420" rx="20" fill="#FBF8FF" stroke="#E5D1FF" stroke-width="2"/>
+  <g font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="360" y="40" font-size="18" font-weight="bold" fill="#2D123F">Arquitectura de Microservicios</text>
+    <g font-size="13" fill="#17111F">
+      <rect x="280" y="64" width="160" height="44" rx="10" fill="#9517F2"/>
+      <text x="360" y="91" fill="#FFFFFF">API Gateway</text>
+
+      <rect x="40"  y="150" width="180" height="48" rx="10" fill="#F3E8FF" stroke="#E5D1FF"/>
+      <text x="130" y="179">Seguridad / Identidad</text>
+      <rect x="270" y="150" width="180" height="48" rx="10" fill="#F3E8FF" stroke="#E5D1FF"/>
+      <text x="360" y="179">Dominio Workflow</text>
+      <rect x="500" y="150" width="180" height="48" rx="10" fill="#F3E8FF" stroke="#E5D1FF"/>
+      <text x="590" y="179">Capacidades externas</text>
+
+      <rect x="40"  y="250" width="180" height="48" rx="10" fill="#FFFFFF" stroke="#E5D1FF"/>
+      <text x="130" y="279">PostgreSQL · pgvector</text>
+      <rect x="270" y="250" width="180" height="48" rx="10" fill="#FFFFFF" stroke="#E5D1FF"/>
+      <text x="360" y="279">Google ADK · Gemini</text>
+      <rect x="500" y="250" width="180" height="48" rx="10" fill="#FFFFFF" stroke="#E5D1FF"/>
+      <text x="590" y="279">Observabilidad</text>
+    </g>
+    <g stroke="#6B2FA0" stroke-width="2" fill="none">
+      <line x1="360" y1="108" x2="130" y2="150"/>
+      <line x1="360" y1="108" x2="360" y2="150"/>
+      <line x1="360" y1="108" x2="590" y2="150"/>
+      <line x1="130" y1="198" x2="130" y2="250"/>
+      <line x1="360" y1="198" x2="360" y2="250"/>
+      <line x1="590" y1="198" x2="590" y2="250"/>
+    </g>
+    <text x="360" y="372" font-size="13" fill="#5E5368">ARCHITECTURE PLACEHOLDER · reemplazar con diagrama oficial</text>
+    <text x="360" y="394" font-size="12" fill="#5E5368">[LINK DIAGRAMA DE ARQUITECTURA]</text>
+  </g>
+</svg>

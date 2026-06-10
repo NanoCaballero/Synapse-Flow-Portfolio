@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Synapse-Flow · Intelligent Agent Orchestration Platform | Fantasy Labs</title>
+  <meta name="description" content="Portafolio final del proyecto Synapse-Flow, plataforma de orquestación de agentes de IA desarrollada por Fantasy Labs para Banorte — reto académico del Tecnológico de Monterrey." />
+  <meta name="author" content="Fantasy Labs" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo-placeholder.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar">
+    <nav class="navbar__inner" aria-label="Navegación principal">
+      <a class="brand" href="#inicio">
+        <img class="brand__logo" src="assets/logo-placeholder.svg" alt="Logo placeholder de Synapse-Flow" />
+        <span class="brand__name">Synapse-Flow<small>FANTASY LABS · BANORTE</small></span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#resumen">Resumen</a></li>
+        <li><a href="#problema">Problema</a></li>
+        <li><a href="#requerimientos">Requerimientos</a></li>
+        <li><a href="#arquitectura">Arquitectura</a></li>
+        <li><a href="#desarrollo">Desarrollo</a></li>
+        <li><a href="#calidad">Calidad</a></li>
+        <li><a href="#deployment">Deployment</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#anexos">Anexos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== 1. INICIO / HERO ===================== -->
+    <section id="inicio" class="hero">
+      <span class="blob blob--1"></span>
+      <span class="blob blob--2"></span>
+      <div class="container">
+        <div class="hero__grid">
+          <div>
+            <span class="hero__badge"><span class="dot"></span> Fantasy Labs · Socio formador Banorte</span>
+            <h1>Synapse-Flow</h1>
+            <p class="hero__subtitle">Intelligent Agent Orchestration Platform</p>
+            <p class="hero__tagline">Diseña · Compila · Ejecuta workflows inteligentes</p>
+            <p class="hero__desc">
+              Plataforma de orquestación de agentes de inteligencia artificial que permite construir
+              workflows visuales mediante nodos conectados, integrando microservicios, IA generativa,
+              RAG, herramientas externas, ejecución segura en sandbox y trazabilidad para un contexto enterprise.
+            </p>
+            <div class="hero__buttons btn-row">
+              <!-- EDITAR: enlaces reales del proyecto -->
+              <a class="btn btn--primary" href="https://canva.link/q8ph9rxii8e6q1n" target="_blank" rel="noopener">Ver presentación final ↗</a>
+              <a class="btn btn--outline" href="https://github.com/salog0d/Synapse-Microservices.git" target="_blank" rel="noopener">GitHub Backend</a>
+              <a class="btn btn--outline" href="https://github.com/aleordaz1130/Synapse-Frontend.git" target="_blank" rel="noopener">GitHub Frontend</a>
+              <!-- EDITAR: reemplazar # con el enlace del video demo -->
+              <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">▶ Video demo <span class="ph">[LINK VIDEO DEMO]</span></a>
+            </div>
+          </div>
+
+          <!-- Panel visual con nodos simulados (HTML/CSS, no imagen) -->
+          <div class="hero__panel" aria-label="Ilustración de un workflow de nodos conectados">
+            <p class="hero__panel-title">Workflow en ejecución</p>
+            <div class="flow-node">
+              <span class="badge-dot">AI</span>
+              <div><strong>AI Node</strong><span>Agente generativo · Gemini 2.5</span></div>
+            </div>
+            <div class="flow-connector"></div>
+            <div class="flow-node flow-node--offset">
+              <span class="badge-dot">RA</span>
+              <div><strong>RAG Node</strong><span>Recupera contexto · pgvector</span></div>
+            </div>
+            <div class="flow-connector"></div>
+            <div class="flow-node">
+              <span class="badge-dot">TL</span>
+              <div><strong>Tool Node</strong><span>Herramientas externas · MCP</span></div>
+            </div>
+            <div class="flow-connector"></div>
+            <div class="flow-node flow-node--offset">
+              <span class="badge-dot">HL</span>
+              <div><strong>Human-in-the-Loop</strong><span>Validación humana</span></div>
+            </div>
+            <div class="flow-connector"></div>
+            <div class="flow-node">
+              <span class="badge-dot">EX</span>
+              <div><strong>Execution Service</strong><span>Runtime de agentes · Google ADK</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 2. RESUMEN EJECUTIVO ===================== -->
+    <section id="resumen" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__eyebrow">Resumen ejecutivo</span>
+          <h2>Qué es Synapse-Flow</h2>
+          <p>
+            Synapse-Flow transforma la creación de procesos inteligentes en una experiencia visual.
+            El usuario puede definir un flujo, conectar nodos, configurar agentes o herramientas,
+            compilar la estructura y ejecutar el workflow con trazabilidad.
+          </p>
+        </div>
+
+        <div class="grid grid--4">
+          <article class="card">
+            <div class="card__icon">⬡</div>
+            <h3>Orquestación de agentes</h3>
+            <p>Coordina agentes de IA, herramientas y decisiones dentro de un mismo flujo visual.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">▣</div>
+            <h3>Arquitectura enterprise</h3>
+            <p>Microservicios desacoplados con seguridad, configuración centralizada y observabilidad.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">✦</div>
+            <h3>IA aplicada</h3>
+            <p>Google ADK + Gemini, RAG con embeddings y ejecución de código en sandbox.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">✓</div>
+            <h3>Calidad y despliegue</h3>
+            <p>Pruebas unitarias, E2E, CI/CD y despliegue contenerizado preparado para producción.</p>
+          </article>
+        </div>
+
+        <h3 class="subhead">Pipeline conceptual</h3>
+        <div class="pipeline">
+          <div class="pipeline__step">
+            <span class="num">1</span>
+            <h3>Definir</h3>
+            <p>El usuario crea workflows visuales mediante nodos conectados.</p>
+          </div>
+          <div class="pipeline__arrow" aria-hidden="true">→</div>
+          <div class="pipeline__step">
+            <span class="num">2</span>
+            <h3>Compilar</h3>
+            <p>El sistema valida, ordena y transforma el grafo en una versión ejecutable.</p>
+          </div>
+          <div class="pipeline__arrow" aria-hidden="true">→</div>
+          <div class="pipeline__step">
+            <span class="num">3</span>
+            <h3>Ejecutar</h3>
+            <p>El motor ejecuta los nodos usando agentes, herramientas, RAG, código o intervención humana.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 3. PROBLEMA Y OBJETIVOS ===================== -->
+    <section id="problema" class="section">
+      <span class="blob blob--1"></span>
+      <div class="container">
+        <div class="section__head">
+          <span class="section__eyebrow">Problema y objetivos</span>
+          <h2>Por qué existe Synapse-Flow</h2>
+        </div>
+
+        <div class="grid grid--2">
+          <article class="card">
+            <h3>3.1 Contexto</h3>
+            <p>El proyecto surge como parte de un reto académico con enfoque en el diseño y construcción
+              de una plataforma de software para una institución financiera. El contexto exige una solución
+              escalable, segura, modular y alineada a prácticas de desarrollo enterprise.</p>
+          </article>
+          <article class="card">
+            <h3>3.2 Problema detectado</h3>
+            <p>Actualmente, la creación y operación de flujos inteligentes con agentes de IA puede requerir
+              conocimientos técnicos, integración manual de modelos, herramientas externas y control de ejecución.
+              Esto dificulta que equipos de negocio puedan diseñar procesos automatizados sin depender
+              completamente de desarrollo especializado.</p>
+          </article>
+        </div>
+
+        <article class="card card--accent" style="margin-top: var(--sp-3);">
+          <h3>3.3 Solución propuesta</h3>
+          <p>Synapse-Flow propone una plataforma visual donde los usuarios pueden crear workflows mediante
+            nodos conectados. Cada nodo representa una acción o capacidad: IA, RAG, código, herramientas,
+            decisiones, triggers o intervención humana.</p>
+        </article>
+
+        <h3 class="subhead">3.4 Usuarios objetivo</h3>
+        <div class="grid grid--4">
+          <article class="card">
+            <div class="card__icon">⚙</div>
+            <h3>Usuarios técnicos</h3>
+            <p>Configuran nodos, integraciones, workflows y herramientas.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">◷</div>
+            <h3>Usuarios de negocio</h3>
+            <p>Supervisan, ejecutan o validan procesos.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">⛁</div>
+            <h3>Administradores</h3>
+            <p>Gestionan usuarios, roles, permisos y trazabilidad.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">☑</div>
+            <h3>Auditoría / operación</h3>
+            <p>Revisan logs, historial y resultados de ejecución.</p>
+          </article>
+        </div>
+
+        <div class="grid grid--2" style="margin-top: var(--sp-3);">
+          <article class="card">
+            <h3>3.5 Objetivo general</h3>
+            <!-- EDITAR: escribir el objetivo general final acordado por el equipo -->
+            <p><span class="ph">[ESCRIBIR OBJETIVO GENERAL FINAL DEL EQUIPO]</span></p>
+
+            <h3 style="margin-top: var(--sp-3);">3.6 Objetivos específicos</h3>
+            <!-- EDITAR: completar los objetivos específicos -->
+            <ul class="checklist checklist--dot">
+              <li><span class="ph">[OBJETIVO ESPECÍFICO 1]</span></li>
+              <li><span class="ph">[OBJETIVO ESPECÍFICO 2]</span></li>
+              <li><span class="ph">[OBJETIVO ESPECÍFICO 3]</span></li>
+              <li><span class="ph">[OBJETIVO ESPECÍFICO 4]</span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>3.7 Valor agregado</h3>
+            <ul class="checklist">
+              <li>Democratiza la creación de workflows de agentes.</li>
+              <li>Reduce dependencia de código manual para procesos inteligentes.</li>
+              <li>Permite integrar IA generativa, herramientas, RAG y validación humana.</li>
+              <li>Se apoya en una arquitectura modular de microservicios.</li>
+              <li>Considera seguridad, trazabilidad y observabilidad desde el diseño.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 4. REQUERIMIENTOS ===================== -->
+    <section id="requerimientos" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__eyebrow">Requerimientos</span>
+          <h2>Funcionales, no funcionales e historias de usuario</h2>
+          <p>Los requerimientos del sistema se definieron a partir de las necesidades del socio formador,
+            el alcance académico del reto y las funcionalidades mínimas necesarias para demostrar la creación,
+            configuración y ejecución de workflows de agentes de IA.</p>
+        </div>
+
+        <!-- NOTA: reemplaza las etiquetas de estado por la clase correcta:
+             badge--done (Implementado) · badge--partial (Parcial)
+             badge--validating (En validación) · badge--future (Futuro)
+             y sustituye los <span class="ph"> de Evidencia por el link o captura real. -->
+        <h3 class="subhead">4.2 Requerimientos funcionales</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>ID</th><th>Requerimiento</th><th>Estado</th><th>Evidencia</th></tr></thead>
+            <tbody>
+              <tr><td>RF-01</td><td>Autenticación de usuarios mediante credenciales y JWT</td><td><span class="badge badge--partial">Parcial</span></td><td><span class="ph">[LINK/CAPTURA]</span></td></tr>
+              <tr><td>RF-02</td><td>Gestión de usuarios, roles y permisos</td><td><span class="badge badge--partial">Parcial</span></td><td><span class="ph">[LINK/CAPTURA]</span></td></tr>
+              <tr><td>RF-03</td><td>Creación y administración de workflows</td><td><span class="badge badge--partial">Parcial</span></td><td><span class="ph">[LINK/CAPTURA]</span></td></tr>
+              <tr><td>RF-04</td><td>Creación y configuración de nodos</td><td><span class="badge badge--partial">Parcial</span></td><td><span class="ph">[LINK/CAPTURA]</span></td></tr>
+              <tr><td>RF-05</td><td>Conexión visual de nodos en un canvas</td><td><span class="badge badge--partial">Parcial</span></td><td><span class="ph">[LINK/CAPTURA]</span></td></tr>
+              <tr><td>RF-06</td><td>Compilación de workflows</td><td><span class="badge badge--partial">Parcial</span></td><td><span class="ph">[LINK/CAPTURA]</span></td></tr>
+              <tr><td>RF-07</td><td>Ejecución de workflows con agentes</td><td><span class="badge badge--partial">Parcial</span></td><td><span class="ph">[LINK/CAPTURA]</span></td></tr>
+              <tr><td>RF-08</td><td>Integración de nodos RAG</td><td><span class="badge badge--partial">Parcial</span></td><td><span class="ph">[LINK/CAPTURA]</span></td></tr>
+              <tr><td>RF-09</td><td>Ejecución de código en sandbox</td><td><span class="badge badge--partial">Parcial</span></td><td><span class="ph">[LINK/CAPTURA]</span></td></tr>
+              <tr><td>RF-10</td><td>Auditoría e historial de ejecuciones</td><td><span class="badge badge--validating">En validación</span></td><td><span class="ph">[LINK/CAPTURA]</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="subhead">4.3 Requerimientos no funcionales</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>ID</th><th>Categoría</th><th>Requerimiento</th><th>Evidencia</th></tr></thead>
+            <tbody>
+              <tr><td>RNF-01</td><td>Seguridad</td><td>Control de acceso mediante JWT y roles</td><td><span class="ph">[EVIDENCIA]</span></td></tr>
+              <tr><td>RNF-02</td><td>Escalabilidad</td><td>Arquitectura basada en microservicios</td><td><span class="ph">[EVIDENCIA]</span></td></tr>
+              <tr><td>RNF-03</td><td>Mantenibilidad</td><td>Separación de responsabilidades por servicio</td><td><span class="ph">[EVIDENCIA]</span></td></tr>
+              <tr><td>RNF-04</td><td>Observabilidad</td><td>Monitoreo con Prometheus, Grafana, Loki y Tempo</td><td><span class="ph">[EVIDENCIA]</span></td></tr>
+              <tr><td>RNF-05</td><td>Disponibilidad</td><td>Despliegue contenerizado y preparado para Kubernetes/OpenShift</td><td><span class="ph">[EVIDENCIA]</span></td></tr>
+              <tr><td>RNF-06</td><td>Confidencialidad</td><td>RAG y embeddings con enfoque on-premise</td><td><span class="ph">[EVIDENCIA]</span></td></tr>
+              <tr><td>RNF-07</td><td>Trazabilidad</td><td>Registro de ejecuciones y auditoría</td><td><span class="ph">[EVIDENCIA]</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="subhead">4.4 Historias de usuario</h3>
+        <div class="grid grid--4">
+          <article class="card"><div class="card__icon">🔑</div><h3>HU-01</h3><p>Como usuario, quiero iniciar sesión para acceder a la plataforma de forma segura.</p></article>
+          <article class="card"><div class="card__icon">⬡</div><h3>HU-02</h3><p>Como usuario técnico, quiero crear nodos reutilizables para construir workflows.</p></article>
+          <article class="card"><div class="card__icon">⤳</div><h3>HU-03</h3><p>Como usuario técnico, quiero conectar nodos visualmente para definir el flujo de ejecución.</p></article>
+          <article class="card"><div class="card__icon">▶</div><h3>HU-04</h3><p>Como usuario, quiero ejecutar workflows para obtener resultados de agentes de IA.</p></article>
+          <article class="card"><div class="card__icon">⛁</div><h3>HU-05</h3><p>Como administrador, quiero gestionar usuarios y roles para controlar permisos.</p></article>
+          <article class="card"><div class="card__icon">☑</div><h3>HU-06</h3><p>Como usuario, quiero consultar historial y auditoría para revisar ejecuciones.</p></article>
+          <article class="card"><div class="card__icon">✦</div><h3>HU-07</h3><p>Como usuario técnico, quiero usar nodos RAG para consultar documentos como contexto.</p></article>
+          <article class="card"><div class="card__icon">{}</div><h3>HU-08</h3><p>Como usuario técnico, quiero ejecutar código en sandbox para agregar lógica personalizada.</p></article>
+        </div>
+
+        <div class="btn-row" style="margin-top: var(--sp-4);">
+          <!-- EDITAR: enlace al documento completo de requerimientos -->
+          <a class="btn btn--primary" href="#">Ver documento completo de requerimientos <span class="ph">[LINK DOCUMENTO DE REQUERIMIENTOS]</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 5. DISEÑO Y ARQUITECTURA ===================== -->
+    <section id="arquitectura" class="section">
+      <span class="blob blob--2"></span>
+      <div class="container">
+        <div class="section__head">
+          <span class="section__eyebrow">Diseño y arquitectura</span>
+          <h2>Una plataforma por capas</h2>
+          <p>Synapse-Flow está diseñado como una arquitectura de microservicios organizada en capas.
+            El sistema separa responsabilidades entre infraestructura, seguridad, dominio del workflow y
+            capacidades externas de ejecución. Esta separación permite escalar, mantener y extender la
+            plataforma de forma controlada.</p>
+        </div>
+
+        <h3 class="subhead">5.2 Capas de arquitectura</h3>
+        <div class="grid grid--2">
+          <article class="card">
+            <span class="badge badge--validating">Capa 1</span>
+            <h3 style="margin-top:10px;">Infraestructura / Spring Cloud</h3>
+            <p>Servicios base que permiten configuración centralizada, descubrimiento de servicios y entrada única al sistema.</p>
+            <ul class="chip-list"><li>Config Server</li><li>Eureka Naming Server</li><li>API Gateway</li></ul>
+          </article>
+          <article class="card">
+            <span class="badge badge--validating">Capa 2</span>
+            <h3 style="margin-top:10px;">Seguridad e identidad</h3>
+            <p>Servicios encargados de autenticación, autorización, RBAC y gestión cifrada de secretos.</p>
+            <ul class="chip-list"><li>Auth Service</li><li>Admin Service</li><li>Authorization Service</li><li>Vault Service</li></ul>
+          </article>
+          <article class="card">
+            <span class="badge badge--validating">Capa 3</span>
+            <h3 style="margin-top:10px;">Dominio del Workflow</h3>
+            <p>Núcleo funcional de Synapse-Flow. Permite definir, compilar y ejecutar workflows.</p>
+            <ul class="chip-list"><li>Workflow Service</li><li>Compile Service</li><li>Execution Service</li></ul>
+          </article>
+          <article class="card">
+            <span class="badge badge--validating">Capa 4</span>
+            <h3 style="margin-top:10px;">Capacidades externas</h3>
+            <p>Componentes que habilitan herramientas externas, auditoría, recuperación de contexto y ejecución aislada.</p>
+            <ul class="chip-list"><li>Tools Execution Service</li><li>Audit Service</li><li>RAG</li><li>Sandbox</li></ul>
+          </article>
+        </div>
+
+        <h3 class="subhead">5.3 Diagrama conceptual</h3>
+        <div class="card">
+          <div class="diagram">
+            <div class="diagram__row"><div class="diagram__node diagram__node--user">👤 Usuario</div></div>
+            <div class="diagram__connector">↓</div>
+            <div class="diagram__row"><div class="diagram__node">Frontend React + Vite + TypeScript</div></div>
+            <div class="diagram__connector">↓</div>
+            <div class="diagram__row"><div class="diagram__node diagram__node--gateway">API Gateway · ruteo + RBAC</div></div>
+            <div class="diagram__connector">↓</div>
+            <div class="diagram__row">
+              <div class="diagram__node">Auth · Admin · Authorization · Vault</div>
+              <div class="diagram__node">Workflow · Compile · Execution</div>
+              <div class="diagram__node">Tools · Audit</div>
+            </div>
+            <div class="diagram__connector">↓</div>
+            <div class="diagram__row">
+              <div class="diagram__node diagram__node--data">PostgreSQL · pgvector</div>
+              <div class="diagram__node diagram__node--data">Google ADK · Gemini</div>
+              <div class="diagram__node diagram__node--data">Observabilidad</div>
+            </div>
+          </div>
+          <figure class="media">
+            <!-- EDITAR: reemplazar por el diagrama oficial de arquitectura -->
+            <img src="assets/architecture-placeholder.svg" alt="Diagrama placeholder de la arquitectura de microservicios de Synapse-Flow" />
+            <figcaption>Diagrama placeholder — reemplazar con <span class="ph">[LINK DIAGRAMA DE ARQUITECTURA]</span></figcaption>
+          </figure>
+        </div>
+
+        <h3 class="subhead">5.4 Microservicios</h3>
+        <!-- NOTA: actualiza la columna Estado con badge--done/partial/validating/future
+             y reemplaza los placeholders de Evidencia por links o capturas. -->
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Servicio</th><th>Responsabilidad</th><th>Estado</th><th>Evidencia</th></tr></thead>
+            <tbody>
+              <tr><td><span class="code">api-gateway</span></td><td>Punto de entrada único, ruteo y RBAC</td><td><span class="badge badge--partial">Parcial</span></td><td><span class="ph">[Evidencia]</span></td></tr>
+              <tr><td><span class="code">naming-server</span></td><td>Service discovery con Eureka</td><td><span class="badge badge--partial">Parcial</span></td><td><span class="ph">[Evidencia]</span></td></tr>
+              <tr><td><span class="code">spring-cloud-config-server</span></td><td>Configuración centralizada</td><td><span class="badge badge--partial">Parcial</span></td><td><span class="ph">[Evidencia]</span></td></tr>
+              <tr><td><span class="code">auth-service</span></td><td>Autenticación JWT</td><td><span class="badge badge--partial">Parcial</span></td><td><span class="ph">[Evidencia]</span></td></tr>
+              <tr><td><span class="code">admin-service</span></td><td>Gestión de usuarios, roles y authorities</td><td><span class="badge badge--partial">Parcial</span></td><td><span class="ph">[Evidencia]</span></td></tr>
+              <tr><td><span class="code">authorization-service</span></td><td>Autorización por recurso</td><td><span class="badge badge--partial">Parcial</span></td><td><span class="ph">[Evidencia]</span></td></tr>
+              <tr><td><span class="code">vault-service</span></td><td>Gestión cifrada de secrets</td><td><span class="badge badge--partial">Parcial</span></td><td><span class="ph">[Evidencia]</span></td></tr>
+              <tr><td><span class="code">workflow-service</span></td><td>CRUD de workflows y nodos</td><td><span class="badge badge--partial">Parcial</span></td><td><span class="ph">[Evidencia]</span></td></tr>
+              <tr><td><span class="code">compile-service</span></td><td>Compilación de workflows</td><td><span class="badge badge--partial">Parcial</span></td><td><span class="ph">[Evidencia]</span></td></tr>
+              <tr><td><span class="code">execution-service</span></td><td>Ejecución de workflows con agentes</td><td><span class="badge badge--partial">Parcial</span></td><td><span class="ph">[Evidencia]</span></td></tr>
+              <tr><td><span class="code">tools-execution-service</span></td><td>Herramientas externas y MCP</td><td><span class="badge badge--partial">Parcial</span></td><td><span class="ph">[Evidencia]</span></td></tr>
+              <tr><td><span class="code">audit-service</span></td><td>Auditoría e historial</td><td><span class="badge badge--validating">En validación</span></td><td><span class="ph">[Evidencia]</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="subhead">5.5 Componentes internos y externos</h3>
+        <div class="two-col">
+          <article class="card">
+            <h3>Internos</h3>
+            <ul class="checklist">
+              <li>Frontend React + Vite + TypeScript</li>
+              <li>API Gateway</li>
+              <li>Microservicios Spring Boot</li>
+              <li>PostgreSQL</li>
+              <li>Redis Cache</li>
+              <li>Vault</li>
+              <li>Sandbox de código</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Externos</h3>
+            <ul class="checklist">
+              <li>Google ADK</li>
+              <li>Gemini 2.5 Flash</li>
+              <li>Ollama</li>
+              <li>MCP tools</li>
+              <li>Observabilidad: Grafana, Prometheus, Loki, Tempo</li>
+              <li>GitHub Actions</li>
+              <li>Kubernetes / OpenShift</li>
+            </ul>
+          </article>
+        </div>
+
+        <h3 class="subhead">5.6 Tipos de nodo</h3>
+        <p>Los nodos representan las capacidades ejecutables dentro de un workflow. Esta abstracción permite
+          extender el sistema agregando nuevos tipos de nodo sin modificar toda la arquitectura.</p>
+        <div class="node-grid">
+          <div class="node-chip"><span class="dot"></span>Nodo AI</div>
+          <div class="node-chip"><span class="dot"></span>Nodo Decisión</div>
+          <div class="node-chip"><span class="dot"></span>Ejecución Paralela</div>
+          <div class="node-chip"><span class="dot"></span>Nodo Trigger</div>
+          <div class="node-chip"><span class="dot"></span>Nodo Tool</div>
+          <div class="node-chip"><span class="dot"></span>Nodo Código</div>
+          <div class="node-chip"><span class="dot"></span>Nodo RAG</div>
+          <div class="node-chip"><span class="dot"></span>Human-in-the-Loop</div>
+          <div class="node-chip"><span class="dot"></span>Nodo MCP</div>
+          <div class="node-chip"><span class="dot"></span>Nodo Internal Tool</div>
+        </div>
+
+        <h3 class="subhead">5.7 Principios de diseño</h3>
+        <div class="grid grid--3">
+          <article class="card"><h3>1. Definir → Compilar → Ejecutar</h3><p>Separación clara entre la definición del flujo y su ejecución.</p></article>
+          <article class="card"><h3>2. Una puerta, una responsabilidad</h3><p>Un único punto de entrada y servicios con responsabilidad única.</p></article>
+          <article class="card"><h3>3. Stateless</h3><p>Guardar + rehidratar estado en lugar de mantenerlo en memoria.</p></article>
+          <article class="card"><h3>4. Desacoplar</h3><p>Componentes intercambiables y escalables de forma independiente.</p></article>
+          <article class="card"><h3>5. Trabajo pesado una vez + caché</h3><p>Compilar una vez y reutilizar mediante cacheo.</p></article>
+          <article class="card"><h3>6. Contener y validar temprano</h3><p>Aislar la ejecución y validar antes de ejecutar.</p></article>
+          <article class="card"><h3>7. Arquitectura políglota</h3><p>Cada componente usa la tecnología más adecuada a su propósito.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 6. DESARROLLO E IMPLEMENTACIÓN ===================== -->
+    <section id="desarrollo" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__eyebrow">Desarrollo e implementación</span>
+          <h2>Stack, frontend, backend e IA</h2>
+        </div>
+
+        <h3 class="subhead">6.1 Stack tecnológico</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Tecnología</th><th>Uso dentro del proyecto</th><th>Beneficio</th></tr></thead>
+            <tbody>
+              <tr><td>Java</td><td>Backend y lógica de negocio</td><td>Enterprise, escalable y seguro.</td></tr>
+              <tr><td>Spring Boot / Cloud</td><td>Microservicios, configuración, gateway, seguridad e integración</td><td>Acelera el desarrollo y permite concentrarse en la lógica.</td></tr>
+              <tr><td>React + Vite + TS</td><td>Frontend web</td><td>Interfaz moderna y tipada.</td></tr>
+              <tr><td>React Flow</td><td>Canvas visual para workflows</td><td>Permite construir grafos de nodos.</td></tr>
+              <tr><td>PostgreSQL 17</td><td>Base de datos principal</td><td>Persistencia confiable.</td></tr>
+              <tr><td>pgvector</td><td>Embeddings para RAG</td><td>Búsqueda semántica.</td></tr>
+              <tr><td>Google ADK</td><td>Motor de ejecución de agentes</td><td>Facilita trabajar con agentes, herramientas y modelos.</td></tr>
+              <tr><td>Gemini 2.5 Flash</td><td>Modelo generativo</td><td>Respuestas de IA.</td></tr>
+              <tr><td>Redis + Spring Cache</td><td>Cacheo de workflows compilados</td><td>Reduce consultas y trabajo repetido.</td></tr>
+              <tr><td>Docker</td><td>Contenedores y sandbox</td><td>Ambientes reproducibles y aislamiento.</td></tr>
+              <tr><td>Eureka</td><td>Descubrimiento de servicios</td><td>Comunicación dinámica entre microservicios.</td></tr>
+              <tr><td>OpenFeign</td><td>Comunicación servicio a servicio</td><td>Clientes declarativos.</td></tr>
+              <tr><td>Grafana</td><td>Visualización</td><td>Dashboards.</td></tr>
+              <tr><td>Prometheus</td><td>Métricas</td><td>Monitoreo.</td></tr>
+              <tr><td>Loki</td><td>Logs</td><td>Centralización.</td></tr>
+              <tr><td>Tempo</td><td>Trazas</td><td>Seguimiento distribuido.</td></tr>
+              <tr><td>GitHub Actions</td><td>CI/CD</td><td>Automatización de pruebas y despliegue.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="two-col" style="margin-top: var(--sp-4);">
+          <article class="card">
+            <h3>6.2 Frontend</h3>
+            <p>El frontend fue desarrollado con React, Vite y TypeScript. Su propósito es permitir la
+              interacción visual con la plataforma: login, navegación, creación de nodos, construcción de
+              workflows, ejecución y administración.</p>
+            <ul class="chip-list">
+              <li>Login</li><li>Sidebar / navegación</li><li>Node Builder</li><li>Workflow list</li>
+              <li>Workflow Builder canvas</li><li>Panel de configuración</li><li>Administración de usuarios</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>6.3 Backend</h3>
+            <p>El backend fue construido con Java, Spring Boot y Spring Cloud bajo un enfoque de
+              microservicios. Cada servicio tiene una responsabilidad específica y se comunica mediante el
+              API Gateway, Eureka y OpenFeign.</p>
+            <ul class="chip-list">
+              <li>Seguridad y autenticación</li><li>Gestión de workflows</li><li>Compilación</li>
+              <li>Ejecución</li><li>Auditoría</li><li>Herramientas externas</li><li>Vault y secretos</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="grid grid--3" style="margin-top: var(--sp-3);">
+          <article class="card">
+            <div class="card__icon">✦</div>
+            <h3>6.4 Google ADK</h3>
+            <p>Google ADK se usa como motor de ejecución de agentes. Permite transformar la definición
+              visual del workflow en una lógica ejecutable, integrando agentes, herramientas, modelos y flujos.
+              Su valor principal es facilitar el trabajo con agentes y ofrecer agnosticismo de despliegue y de modelos.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">⌕</div>
+            <h3>6.5 RAG</h3>
+            <p>El módulo RAG permite recuperar contexto desde documentos usando embeddings y búsqueda
+              semántica. Los documentos se procesan para generar vectores que se almacenan en PostgreSQL con
+              pgvector. Esto permite que los agentes consulten información relevante antes de generar respuestas.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">{}</div>
+            <h3>6.6 Sandbox de código</h3>
+            <p>Los nodos de código se ejecutan en un entorno aislado mediante contenedores Docker efímeros.
+              Esto reduce riesgos al limitar recursos, permisos y acceso del código ejecutado.</p>
+          </article>
+        </div>
+
+        <h3 class="subhead">6.7 Repositorios</h3>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="https://github.com/salog0d/Synapse-Microservices.git" target="_blank" rel="noopener">Backend ↗</a>
+          <a class="btn btn--outline" href="https://github.com/aleordaz1130/Synapse-Frontend.git" target="_blank" rel="noopener">Frontend ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 7. CALIDAD Y PRUEBAS ===================== -->
+    <section id="calidad" class="section">
+      <span class="blob blob--1"></span>
+      <div class="container">
+        <div class="section__head">
+          <span class="section__eyebrow">Calidad y pruebas</span>
+          <h2>Estrategia de calidad</h2>
+          <p>La calidad del proyecto se abordó mediante pruebas unitarias, pruebas de integración,
+            pruebas E2E, pruebas de usabilidad, pruebas de aceptación y pruebas de seguridad. También se
+            documentaron resultados, retroalimentación y recomendaciones de mejora.</p>
+        </div>
+
+        <h3 class="subhead">7.2 Pruebas unitarias e integración</h3>
+        <div class="two-col">
+          <article class="card">
+            <h3>Backend</h3>
+            <ul class="chip-list"><li>JUnit 5</li><li>Mockito</li><li>Testcontainers</li></ul>
+            <p style="margin-top:10px;">Pruebas de controllers, compilación y lógica de nodos.</p>
+          </article>
+          <article class="card">
+            <h3>Frontend / E2E</h3>
+            <ul class="chip-list"><li>Selenium</li><li>Python</li><li>pytest</li></ul>
+            <p style="margin-top:10px;">Pruebas de login, navegación y Node Builder.</p>
+          </article>
+        </div>
+
+        <h3 class="subhead">7.3 Pruebas de usabilidad</h3>
+        <!-- NOTA: NO inventes métricas. Completa Resultado y Evidencia con datos reales del equipo. -->
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Métrica</th><th>Resultado</th><th>Evidencia</th></tr></thead>
+            <tbody>
+              <tr><td>Facilidad de uso</td><td><span class="ph">[RESULTADO]</span></td><td><span class="ph">[LINK]</span></td></tr>
+              <tr><td>Claridad de interfaz</td><td><span class="ph">[RESULTADO]</span></td><td><span class="ph">[LINK]</span></td></tr>
+              <tr><td>Confianza del usuario</td><td><span class="ph">[RESULTADO]</span></td><td><span class="ph">[LINK]</span></td></tr>
+              <tr><td>Satisfacción general</td><td><span class="ph">[RESULTADO]</span></td><td><span class="ph">[LINK]</span></td></tr>
+              <tr><td>NPS</td><td><span class="ph">[RESULTADO]</span></td><td><span class="ph">[LINK]</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="two-col" style="margin-top: var(--sp-4);">
+          <article class="card">
+            <h3>7.4 Hallazgos principales</h3>
+            <!-- EDITAR: completar con los hallazgos reales de las pruebas -->
+            <ul class="checklist checklist--dot">
+              <li><span class="ph">[HALLAZGO 1]</span></li>
+              <li><span class="ph">[HALLAZGO 2]</span></li>
+              <li><span class="ph">[HALLAZGO 3]</span></li>
+              <li><span class="ph">[HALLAZGO 4]</span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>7.5 Recomendaciones de mejora</h3>
+            <ul class="checklist">
+              <li>Mejorar feedback visual al guardar o ejecutar workflows.</li>
+              <li>Separar configuración básica y avanzada de nodos.</li>
+              <li>Agregar ejemplos para nodos de decisión, transformación y RAG.</li>
+              <li>Hacer más visible la sección de auditoría e historial.</li>
+              <li>Mejorar mensajes de error y recuperación.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="two-col" style="margin-top: var(--sp-3);">
+          <article class="card">
+            <h3>7.6 Pruebas de aceptación</h3>
+            <p>Las pruebas de aceptación validan que las funcionalidades principales cumplan con los
+              requerimientos definidos para el proyecto.</p>
+            <!-- EDITAR: enlace al plan de pruebas de aceptación -->
+            <a class="btn btn--outline" href="#" style="margin-top:10px;">Ver plan de pruebas de aceptación <span class="ph">[LINK PLAN DE PRUEBAS DE ACEPTACIÓN]</span></a>
+          </article>
+          <article class="card">
+            <h3>7.7 Pruebas de seguridad</h3>
+            <p>Las pruebas de seguridad evalúan aspectos como autenticación, autorización, control de acceso,
+              manejo de secretos y riesgos asociados a ejecución de código o interacción con IA.</p>
+            <!-- EDITAR: enlace a las pruebas de seguridad -->
+            <a class="btn btn--outline" href="#" style="margin-top:10px;">Ver pruebas de seguridad <span class="ph">[LINK PRUEBAS DE SEGURIDAD]</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 8. DEPLOYMENT Y OBSERVABILIDAD ===================== -->
+    <section id="deployment" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__eyebrow">Deployment y observabilidad</span>
+          <h2>Listo para operación enterprise</h2>
+        </div>
+
+        <div class="two-col">
+          <article class="card">
+            <h3>8.1 Deployment</h3>
+            <p>El proyecto fue diseñado para ejecutarse mediante contenedores y una arquitectura preparada
+              para ambientes enterprise. Se consideran Docker, Kubernetes/OpenShift y configuración centralizada
+              para facilitar despliegue, escalabilidad y operación.</p>
+          </article>
+          <article class="card">
+            <h3>8.2 CI/CD</h3>
+            <p>El proyecto integra GitHub Actions para automatizar procesos de validación, pruebas y
+              preparación del despliegue.</p>
+          </article>
+        </div>
+
+        <div class="table-wrap" style="margin-top: var(--sp-3);">
+          <table>
+            <thead><tr><th>Elemento</th><th>Descripción</th><th>Evidencia</th></tr></thead>
+            <tbody>
+              <tr><td>GitHub Actions</td><td>Pipeline de integración continua</td><td><span class="ph">[LINK/CAPTURA]</span></td></tr>
+              <tr><td>Unit Testing</td><td>Ejecución de pruebas automatizadas</td><td><span class="ph">[LINK/CAPTURA]</span></td></tr>
+              <tr><td>Deployment</td><td>Proceso de despliegue</td><td><span class="ph">[LINK/CAPTURA]</span></td></tr>
+              <tr><td>README</td><td>Documentación técnica actualizada</td><td><span class="ph">[LINK/CAPTURA]</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="subhead">8.3 Observabilidad</h3>
+        <p style="font-weight:600; color: var(--color-oscuro);">Prometheus mide, Loki centraliza logs, Tempo sigue trazas y Grafana visualiza todo en dashboards.</p>
+        <div class="grid grid--3" style="margin-top: var(--sp-3);">
+          <article class="card"><h3>Prometheus</h3><p>Recolecta métricas de los microservicios, como latencia, errores, disponibilidad y uso de recursos.</p></article>
+          <article class="card"><h3>Grafana</h3><p>Permite visualizar métricas, logs y trazas en dashboards para monitoreo operativo.</p></article>
+          <article class="card"><h3>Loki</h3><p>Centraliza logs de los microservicios para facilitar diagnóstico y análisis de errores.</p></article>
+          <article class="card"><h3>Tempo</h3><p>Permite distributed tracing para seguir una petición a través de varios microservicios.</p></article>
+          <article class="card"><h3>Alertmanager</h3><p>Gestiona alertas basadas en condiciones detectadas por Prometheus.</p></article>
+          <article class="card"><h3>OpenShift / Kubernetes</h3><p>Plataforma de despliegue enterprise para administrar contenedores, escalabilidad, configuración y operación.</p></article>
+        </div>
+
+        <h3 class="subhead">8.4 Ambientes</h3>
+        <!-- NOTA: completa URL, usuario, contraseña y estado de cada ambiente.
+             Usa badge--done/partial/validating/future en la columna Estado. -->
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Ambiente</th><th>URL</th><th>Usuario</th><th>Contraseña</th><th>Estado</th></tr></thead>
+            <tbody>
+              <tr><td>Desarrollo</td><td><span class="ph">[LINK]</span></td><td><span class="ph">[USUARIO]</span></td><td><span class="ph">[PASSWORD]</span></td><td><span class="ph">[ESTADO]</span></td></tr>
+              <tr><td>Pruebas</td><td><span class="ph">[LINK]</span></td><td><span class="ph">[USUARIO]</span></td><td><span class="ph">[PASSWORD]</span></td><td><span class="ph">[ESTADO]</span></td></tr>
+              <tr><td>Producción / Demo</td><td><span class="ph">[LINK]</span></td><td><span class="ph">[USUARIO DEMO]</span></td><td><span class="ph">[CONTRASEÑA DEMO]</span></td><td><span class="ph">[ESTADO]</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 9. RESULTADOS Y LECCIONES ===================== -->
+    <section id="resultados" class="section">
+      <span class="blob blob--2"></span>
+      <div class="container">
+        <div class="section__head">
+          <span class="section__eyebrow">Resultados y lecciones aprendidas</span>
+          <h2>Lo que construimos y aprendimos</h2>
+        </div>
+
+        <h3 class="subhead">9.1 Resultados obtenidos</h3>
+        <div class="grid grid--4">
+          <article class="card"><div class="card__icon">⬡</div><p>Plataforma visual para workflows de agentes.</p></article>
+          <article class="card"><div class="card__icon">▣</div><p>Arquitectura de microservicios implementada.</p></article>
+          <article class="card"><div class="card__icon">🔑</div><p>Seguridad con JWT y roles.</p></article>
+          <article class="card"><div class="card__icon">✦</div><p>Integración de IA con Google ADK y Gemini.</p></article>
+          <article class="card"><div class="card__icon">⌕</div><p>RAG con embeddings y búsqueda semántica.</p></article>
+          <article class="card"><div class="card__icon">{}</div><p>Ejecución de código en sandbox.</p></article>
+          <article class="card"><div class="card__icon">✓</div><p>Pruebas y evidencias de calidad.</p></article>
+          <article class="card"><div class="card__icon">▤</div><p>Documentación técnica y repositorios.</p></article>
+        </div>
+
+        <div class="two-col" style="margin-top: var(--sp-4);">
+          <article class="card">
+            <h3>9.2 Logros del proyecto</h3>
+            <!-- EDITAR: completar con los logros reales del equipo -->
+            <ul class="checklist checklist--dot">
+              <li><span class="ph">[LOGRO 1]</span></li>
+              <li><span class="ph">[LOGRO 2]</span></li>
+              <li><span class="ph">[LOGRO 3]</span></li>
+              <li><span class="ph">[LOGRO 4]</span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>9.3 Dificultades enfrentadas</h3>
+            <ul class="checklist checklist--dot">
+              <li>Integración entre frontend, gateway y microservicios.</li>
+              <li>Diseño de ejecución de workflows complejos.</li>
+              <li>Seguridad en ejecución de código.</li>
+              <li>Configuración de ambientes y servicios.</li>
+              <li>Validación de RAG y herramientas externas.</li>
+              <li>Coordinación de entregables y documentación.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="two-col" style="margin-top: var(--sp-3);">
+          <article class="card">
+            <h3>9.4 Lecciones aprendidas</h3>
+            <ul class="checklist">
+              <li>La arquitectura de microservicios exige trazabilidad, configuración y comunicación bien definidas.</li>
+              <li>La IA dentro de sistemas enterprise requiere seguridad, auditoría y control.</li>
+              <li>Un workflow visual necesita validaciones claras para ser útil.</li>
+              <li>La calidad no solo depende de pruebas unitarias, también de usabilidad, seguridad y despliegue.</li>
+              <li>La documentación y configuración son parte esencial del producto final.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>9.5 Trabajo futuro</h3>
+            <ul class="checklist checklist--dot">
+              <li>Mejorar experiencia visual del workflow builder.</li>
+              <li>Robustecer audit-service.</li>
+              <li>Ampliar tipos de nodos.</li>
+              <li>Integrar más herramientas MCP.</li>
+              <li>Fortalecer seguridad OWASP.</li>
+              <li>Mejorar dashboards de observabilidad.</li>
+              <li>Preparar despliegue completo en ambiente enterprise.</li>
+              <li>Ampliar pruebas automatizadas.</li>
+            </ul>
+          </article>
+        </div>
+
+        <h3 class="subhead">Equipo Fantasy Labs</h3>
+        <div class="team-grid">
+          <div class="team-card"><span class="avatar">SC</span><div><strong>Santiago Calvo Lomelí</strong><span>Team Lead &amp; Backend Engineer</span></div></div>
+          <div class="team-card"><span class="avatar">DN</span><div><strong>David Salomón Nava Nungaray</strong><span>Tech Lead &amp; Backend Engineer</span></div></div>
+          <div class="team-card"><span class="avatar">AO</span><div><strong>Alejandra Ordaz González</strong><span>Frontend Engineer</span></div></div>
+          <div class="team-card"><span class="avatar">BC</span><div><strong>Bernardo Caballero Zambrano</strong><span>Full Stack Engineer</span></div></div>
+          <div class="team-card"><span class="avatar">LM</span><div><strong>Luis Hubert Madrian Valero</strong><span>Full Stack Engineer &amp; Scrum Master</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 10. ANEXOS Y EVIDENCIAS ===================== -->
+    <section id="anexos" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <span class="section__eyebrow">Anexos y evidencias</span>
+          <h2>Documentación, repositorios y entregables</h2>
+          <p>Centro de enlaces del proyecto. Reemplaza cada <span class="ph">[PLACEHOLDER]</span> por el enlace real correspondiente.</p>
+        </div>
+
+        <!-- EDITAR: en TODO este bloque sustituye los href="#" y los [PLACEHOLDER] por links reales -->
+        <div class="grid grid--3">
+          <div class="link-group">
+            <h3>📄 Documentación</h3>
+            <ul>
+              <li>Documento de requerimientos <a href="#"><span class="ph">[LINK]</span></a></li>
+              <li>Documento de diseño <a href="#"><span class="ph">[LINK]</span></a></li>
+              <li>SCMP / Gestión de configuración <a href="#"><span class="ph">[LINK SCMP]</span></a></li>
+              <li>Plan de cierre <a href="#"><span class="ph">[LINK]</span></a></li>
+              <li>Pruebas de usabilidad <a href="#"><span class="ph">[LINK]</span></a></li>
+              <li>Plan de pruebas de aceptación <a href="#"><span class="ph">[LINK]</span></a></li>
+              <li>Pruebas de seguridad <a href="#"><span class="ph">[LINK]</span></a></li>
+            </ul>
+          </div>
+
+          <div class="link-group">
+            <h3>💻 Repositorios</h3>
+            <ul>
+              <li>Backend <a href="https://github.com/salog0d/Synapse-Microservices.git" target="_blank" rel="noopener">GitHub ↗</a></li>
+              <li>Frontend <a href="https://github.com/aleordaz1130/Synapse-Frontend.git" target="_blank" rel="noopener">GitHub ↗</a></li>
+            </ul>
+            <h3 style="margin-top: var(--sp-3);">🎬 Presentación y demo</h3>
+            <ul>
+              <li>Presentación final <a href="https://canva.link/q8ph9rxii8e6q1n" target="_blank" rel="noopener">Canva ↗</a></li>
+              <li>Video demo <a href="#"><span class="ph">[LINK VIDEO DEMO]</span></a></li>
+              <li>Demo en vivo <a href="#"><span class="ph">[LINK DEPLOYMENT / AMBIENTE]</span></a></li>
+            </ul>
+          </div>
+
+          <div class="link-group">
+            <h3>📌 Gestión del proyecto</h3>
+            <ul>
+              <li>Backlog / GitHub Project / Jira <a href="#"><span class="ph">[LINK]</span></a></li>
+              <li>EDT <a href="#"><span class="ph">[LINK EDT]</span></a></li>
+              <li>Evidencia de sprints <a href="#"><span class="ph">[LINK DRIVE]</span></a></li>
+              <li>Minutas / seguimiento <a href="#"><span class="ph">[LINK DRIVE]</span></a></li>
+            </ul>
+          </div>
+
+          <div class="link-group">
+            <h3>🗺 Diagramas</h3>
+            <ul>
+              <li>Arquitectura <a href="#"><span class="ph">[LINK]</span></a></li>
+              <li>Stack tecnológico <a href="#"><span class="ph">[LINK]</span></a></li>
+              <li>Componentes <a href="#"><span class="ph">[LINK]</span></a></li>
+              <li>Modelo de datos <a href="#"><span class="ph">[LINK]</span></a></li>
+              <li>Deployment <a href="#"><span class="ph">[LINK]</span></a></li>
+            </ul>
+          </div>
+
+          <div class="link-group">
+            <h3>🧪 Calidad</h3>
+            <ul>
+              <li>Evidencia de pruebas unitarias <a href="#"><span class="ph">[LINK]</span></a></li>
+              <li>Evidencia Selenium <a href="#"><span class="ph">[LINK]</span></a></li>
+              <li>Resultados de usabilidad <a href="#"><span class="ph">[LINK]</span></a></li>
+              <li>Evidencia de seguridad <a href="#"><span class="ph">[LINK]</span></a></li>
+            </ul>
+          </div>
+
+          <div class="link-group">
+            <h3>▶ Video demo</h3>
+            <figure class="media" style="margin:0;">
+              <!-- EDITAR: reemplaza el placeholder por una miniatura o enlaza el video -->
+              <a href="#"><img src="assets/demo-placeholder.svg" alt="Placeholder del video demo de Synapse-Flow" /></a>
+              <figcaption>Reemplazar con <span class="ph">[LINK VIDEO DEMO]</span></figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="callout">
+          <h3>¿Listo para conocer Synapse-Flow a fondo?</h3>
+          <p>Revisa la presentación final y los repositorios del proyecto.</p>
+          <div class="btn-row" style="justify-content:center;">
+            <a class="btn btn--primary" href="https://canva.link/q8ph9rxii8e6q1n" target="_blank" rel="noopener">Presentación final ↗</a>
+            <a class="btn btn--outline" href="https://github.com/salog0d/Synapse-Microservices.git" target="_blank" rel="noopener">Backend</a>
+            <a class="btn btn--outline" href="https://github.com/aleordaz1130/Synapse-Frontend.git" target="_blank" rel="noopener">Frontend</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">
+            <img src="assets/logo-placeholder.svg" alt="Logo placeholder de Synapse-Flow" />
+            <strong>Synapse-Flow</strong>
+          </div>
+          <p>Intelligent Agent Orchestration Platform.<br>
+            Portafolio final del equipo <strong>Fantasy Labs</strong> para el socio formador <strong>Banorte</strong>,
+            reto académico del <strong>Tecnológico de Monterrey</strong>.</p>
+        </div>
+        <div>
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#resumen">Resumen ejecutivo</a></li>
+            <li><a href="#arquitectura">Arquitectura</a></li>
+            <li><a href="#calidad">Calidad y pruebas</a></li>
+            <li><a href="#anexos">Anexos y evidencias</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Links rápidos</h4>
+          <ul>
+            <li><a href="https://canva.link/q8ph9rxii8e6q1n" target="_blank" rel="noopener">Presentación final ↗</a></li>
+            <li><a href="https://github.com/salog0d/Synapse-Microservices.git" target="_blank" rel="noopener">GitHub Backend ↗</a></li>
+            <li><a href="https://github.com/aleordaz1130/Synapse-Frontend.git" target="_blank" rel="noopener">GitHub Frontend ↗</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        Synapse-Flow · Fantasy Labs · Tecnológico de Monterrey · Socio formador Banorte · <span data-year>2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón volver arriba -->
+  <button class="to-top" aria-label="Volver arriba">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

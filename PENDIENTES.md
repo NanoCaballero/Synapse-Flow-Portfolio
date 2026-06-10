@@ -31,14 +31,16 @@ publicar**. Marca `[x]` cuando termines cada punto.
 - [ ] EDT (estructura de desglose de trabajo) → `[LINK EDT]`
 
 ## 3. Diagramas (imagen o link — sección 5 y Anexos)
-- [ ] Diagrama de **arquitectura** → `[LINK DIAGRAMA DE ARQUITECTURA]`
-      ⚠️ Para M2 debe: clasificar componentes **internos por capa** (UI / Integración /
-      Almacenamiento), distinguir **internos vs externos**, marcar lo **futuro** con leyenda,
-      y describir la **tecnología** de cada componente. También va en el README del repo backend.
+- [x] Diagrama de **arquitectura** — ✅ enlazado (carpeta de diagramas)
+      ⚠️ Para M2 verifica que el diagrama: clasifique componentes **internos por capa**
+      (UI / Integración / Almacenamiento), distinga **internos vs externos**, marque lo
+      **futuro** con leyenda, y describa la **tecnología** de cada componente. También va
+      en el README del repo backend.
 - [x] Diagrama de **stack tecnológico** — ✅ enlazado
-- [ ] Diagrama de **componentes**
-- [ ] **Modelo de datos**
-- [ ] Diagrama de **deployment**
+- [x] Diagrama de **componentes** — ✅ enlazado (carpeta de diagramas)
+- [x] **Modelo de datos** — ✅ enlazado (carpeta de diagramas)
+- [x] Diagrama de **deployment** — ✅ enlazado (carpeta de diagramas)
+- ℹ️ Todos los diagramas apuntan a la carpeta general; si quieren, enlacen cada uno individual.
 
 ## 4. Demo y media
 - [ ] **Video demo** de la aplicación → `[LINK VIDEO DEMO]` (aparece en 3 lugares: hero, sección Anexos y tarjeta de video)
@@ -70,10 +72,8 @@ publicar**. Marca `[x]` cuando termines cada punto.
 - [ ] Una vez validados, **borrar todos los `[VALIDAR CON EQUIPO]`** para que no se vean en la presentación
 
 ## 9. Estados (badges) — sección 4.2 y 5.4
-Actualmente: casi todo en **Implementado** (verde); `audit-service` y RF-10 (auditoría) en
-**En validación** (ámbar).
+Actualmente: **todos los RF y microservicios en Implementado** (verde). 0 en ámbar.
 - [ ] Confirmar que cada "Implementado" realmente funciona en el demo
-- [ ] Si auditoría ya jala → subir `audit-service` y RF-10 a Implementado
 - [ ] Si algo NO está listo → bajarlo a `badge--partial` (Parcial) o `badge--validating` (En validación)
 
 ---

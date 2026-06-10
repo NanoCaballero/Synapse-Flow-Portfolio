@@ -131,6 +131,7 @@ suma la exigencia de seguridad, confidencialidad, trazabilidad y cumplimiento re
 - **HU-07** — Como usuario técnico, quiero usar nodos RAG para consultar documentos como contexto.
 - **HU-08** — Como usuario técnico, quiero ejecutar código en sandbox para agregar lógica personalizada.
 
+> **Historias de usuario (documento):** https://docs.google.com/document/d/1gQoOdYbahLUI-krEZVn7KSH6qbnBnFcRdD3ZWy52SFI/edit?usp=sharing
 > 📎 PEGAR LINK: documento completo de requerimientos (SRS) · Administración del proyecto / backlog (GitHub Project, Jira o Trello)
 
 ---
@@ -262,9 +263,9 @@ trazabilidad); T2 con un usuario parcial. Tiempo promedio por tarea ≈ 1:15.
 | Anexo | Enlace / archivo |
 |---|---|
 | EDT (Estructura de Desglose de Trabajo) | 📎 PEGAR LINK |
-| Diagrama de arquitectura | 🖼️ INSERTAR / 📎 PEGAR LINK |
+| Diagramas (arquitectura, componentes, modelo de datos, deployment) — carpeta | https://drive.google.com/drive/folders/1HnIMJnIF6qGjqSlpjkL-XdKSDwatm7pH?usp=sharing |
 | Diagrama de stack tecnológico | https://drive.google.com/file/d/1zKXaIf3RwFEqGOvTlUe0myGZS6EI4o0W/view?usp=sharing |
-| Modelo de datos | 🖼️ INSERTAR / 📎 PEGAR LINK |
+| Historias de usuario (documento) | https://docs.google.com/document/d/1gQoOdYbahLUI-krEZVn7KSH6qbnBnFcRdD3ZWy52SFI/edit?usp=sharing |
 | Documento de requerimientos (SRS) | 📎 PEGAR LINK |
 | Documento de diseño (M2) | 📎 PEGAR LINK |
 | SCMP — Plan de gestión de configuración | https://docs.google.com/document/d/1qzfMGPEHgDA3a8VukmyRye1VlTaLrnubjHgRsBOdb6Y/edit?usp=sharing |

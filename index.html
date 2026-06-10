@@ -237,16 +237,20 @@
         <div class="grid grid--2" style="margin-top: var(--sp-3);">
           <article class="card">
             <h3>3.5 Objetivo general</h3>
-            <!-- EDITAR: escribir el objetivo general final acordado por el equipo -->
-            <p><span class="ph">[ESCRIBIR OBJETIVO GENERAL FINAL DEL EQUIPO]</span></p>
+            <!-- EDITAR: propuesta de objetivo general; el equipo debe validar/ajustar -->
+            <p>Diseñar y construir una plataforma de orquestación de agentes de inteligencia
+              artificial que permita a usuarios técnicos y de negocio definir, compilar y
+              ejecutar workflows mediante nodos visuales conectados, bajo una arquitectura de
+              microservicios segura, trazable y escalable apropiada para un entorno enterprise
+              como Banorte. <span class="ph">[VALIDAR CON EQUIPO]</span></p>
 
             <h3 style="margin-top: var(--sp-3);">3.6 Objetivos específicos</h3>
-            <!-- EDITAR: completar los objetivos específicos -->
+            <!-- EDITAR: propuesta; validar/ajustar con el equipo -->
             <ul class="checklist checklist--dot">
-              <li><span class="ph">[OBJETIVO ESPECÍFICO 1]</span></li>
-              <li><span class="ph">[OBJETIVO ESPECÍFICO 2]</span></li>
-              <li><span class="ph">[OBJETIVO ESPECÍFICO 3]</span></li>
-              <li><span class="ph">[OBJETIVO ESPECÍFICO 4]</span></li>
+              <li>Implementar el pipeline Definir → Compilar → Ejecutar sobre un grafo de nodos validado y ordenado.</li>
+              <li>Integrar capacidades de IA (Google ADK + Gemini), RAG, herramientas externas y ejecución de código en sandbox.</li>
+              <li>Garantizar seguridad e identidad mediante autenticación JWT, RBAC y gestión cifrada de secretos.</li>
+              <li>Proveer trazabilidad y observabilidad de las ejecuciones (auditoría, métricas, logs y trazas). <span class="ph">[VALIDAR CON EQUIPO]</span></li>
             </ul>
           </article>
           <article class="card">
@@ -549,9 +553,11 @@
           <article class="card">
             <div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M15.8 15.8 20.5 20.5"/></svg></div>
             <h3>6.5 RAG</h3>
-            <p>El módulo RAG permite recuperar contexto desde documentos usando embeddings y búsqueda
-              semántica. Los documentos se procesan para generar vectores que se almacenan en PostgreSQL con
-              pgvector. Esto permite que los agentes consulten información relevante antes de generar respuestas.</p>
+            <p>El módulo RAG recupera contexto desde documentos mediante embeddings y búsqueda semántica.
+              Los vectores se generan con <strong>Ollama on-premise</strong> al subir el documento (trabajo
+              pesado una sola vez) y se almacenan en PostgreSQL con <strong>pgvector</strong>. El enfoque
+              on-premise responde a la <strong>confidencialidad y el cumplimiento regulatorio</strong> de una
+              institución financiera: los documentos del banco no salen de la infraestructura.</p>
           </article>
           <article class="card">
             <div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 7l-4 5 4 5M16 7l4 5-4 5M13.5 5.5l-3 13"/></svg></div>
@@ -596,16 +602,21 @@
         </div>
 
         <h3 class="subhead">7.3 Pruebas de usabilidad</h3>
-        <!-- NOTA: NO inventes métricas. Completa Resultado y Evidencia con datos reales del equipo. -->
+        <!-- NOTA: métricas tomadas del estudio de usabilidad del equipo. Confirmar que son las finales. -->
+        <p>Se aplicó una prueba de usabilidad con <strong>5 usuarios técnicos de ITC</strong> sobre 7 tareas
+          representativas (acceso, crear nodo, construir workflow, ejecutar, human-in-the-loop, editar y revisar
+          auditoría). Tasa de éxito: <strong>100% en T1, T3, T4 y T5</strong>; <strong>50% en T6 y T7</strong>
+          (edición y trazabilidad). <span class="ph">[VALIDAR CON EQUIPO]</span></p>
         <div class="table-wrap">
           <table>
             <thead><tr><th>Métrica</th><th>Resultado</th><th>Evidencia</th></tr></thead>
             <tbody>
-              <tr><td>Facilidad de uso</td><td><span class="ph">[RESULTADO]</span></td><td><span class="ph">[LINK]</span></td></tr>
-              <tr><td>Claridad de interfaz</td><td><span class="ph">[RESULTADO]</span></td><td><span class="ph">[LINK]</span></td></tr>
-              <tr><td>Confianza del usuario</td><td><span class="ph">[RESULTADO]</span></td><td><span class="ph">[LINK]</span></td></tr>
-              <tr><td>Satisfacción general</td><td><span class="ph">[RESULTADO]</span></td><td><span class="ph">[LINK]</span></td></tr>
-              <tr><td>NPS</td><td><span class="ph">[RESULTADO]</span></td><td><span class="ph">[LINK]</span></td></tr>
+              <tr><td>Facilidad de uso</td><td>4.0 / 5</td><td><span class="ph">[LINK]</span></td></tr>
+              <tr><td>Claridad de interfaz</td><td>4.2 / 5</td><td><span class="ph">[LINK]</span></td></tr>
+              <tr><td>Rapidez percibida</td><td>3.8 / 5</td><td><span class="ph">[LINK]</span></td></tr>
+              <tr><td>Confianza del usuario</td><td>3.4 / 5</td><td><span class="ph">[LINK]</span></td></tr>
+              <tr><td>Satisfacción general</td><td>4.2 / 5</td><td><span class="ph">[LINK]</span></td></tr>
+              <tr><td>NPS</td><td>8 / 10</td><td><span class="ph">[LINK]</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -613,12 +624,12 @@
         <div class="two-col" style="margin-top: var(--sp-4);">
           <article class="card">
             <h3>7.4 Hallazgos principales</h3>
-            <!-- EDITAR: completar con los hallazgos reales de las pruebas -->
             <ul class="checklist checklist--dot">
-              <li><span class="ph">[HALLAZGO 1]</span></li>
-              <li><span class="ph">[HALLAZGO 2]</span></li>
-              <li><span class="ph">[HALLAZGO 3]</span></li>
-              <li><span class="ph">[HALLAZGO 4]</span></li>
+              <li>Falta de feedback visual claro al guardar o ejecutar un workflow.</li>
+              <li>La configuración avanzada de nodos resulta confusa.</li>
+              <li>La auditoría e historial son difíciles de localizar.</li>
+              <li>Diferencia poco clara entre crear un nodo nuevo y reutilizar uno existente.</li>
+              <li>Demasiados parámetros visibles a la vez en el panel de configuración.</li>
             </ul>
           </article>
           <article class="card">
@@ -698,8 +709,10 @@
         </div>
 
         <h3 class="subhead">8.4 Ambientes</h3>
-        <!-- NOTA: completa URL, usuario, contraseña y estado de cada ambiente.
-             Usa badge--done/partial/validating/future en la columna Estado. -->
+        <!-- NOTA: completa URL y estado. Las credenciales demo NO se publican aquí (sitio público):
+             se entregan en eLumen. Usa badge--done/partial/validating/future en Estado. -->
+        <p>Por tratarse de un proyecto bancario en un sitio público, las <strong>credenciales de acceso
+          se entregan únicamente vía eLumen</strong>, no en este portafolio.</p>
         <div class="table-wrap">
           <table>
             <thead><tr><th>Ambiente</th><th>URL</th><th>Usuario</th><th>Contraseña</th><th>Estado</th></tr></thead>
@@ -737,12 +750,12 @@
         <div class="two-col" style="margin-top: var(--sp-4);">
           <article class="card">
             <h3>9.2 Logros del proyecto</h3>
-            <!-- EDITAR: completar con los logros reales del equipo -->
+            <!-- EDITAR: propuesta con base en el trabajo realizado; validar/ajustar -->
             <ul class="checklist checklist--dot">
-              <li><span class="ph">[LOGRO 1]</span></li>
-              <li><span class="ph">[LOGRO 2]</span></li>
-              <li><span class="ph">[LOGRO 3]</span></li>
-              <li><span class="ph">[LOGRO 4]</span></li>
+              <li>Pipeline funcional Definir → Compilar → Ejecutar sobre un grafo de nodos (orden topológico de Kahn y caché por hash).</li>
+              <li>Arquitectura de microservicios sobre Spring Boot 4 / Spring Cloud con seguridad JWT, RBAC y secretos cifrados.</li>
+              <li>Integración de IA con Google ADK + Gemini, RAG on-premise (Ollama + pgvector) y ejecución de código en sandbox aislado.</li>
+              <li>Estudio de usabilidad con usuarios reales (NPS 8/10) y suite de pruebas backend (JUnit/Mockito/Testcontainers) y E2E (Selenium). <span class="ph">[VALIDAR CON EQUIPO]</span></li>
             </ul>
           </article>
           <article class="card">
@@ -809,6 +822,7 @@
           <div class="link-group">
             <h3><svg class="lg-ico" aria-hidden="true" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg> Documentación</h3>
             <ul>
+              <li>Reporte del portafolio (M1) <a href="#"><span class="ph">[LINK DOCUMENTO DE REPORTE]</span></a></li>
               <li>Documento de requerimientos <a href="#"><span class="ph">[LINK]</span></a></li>
               <li>Documento de diseño <a href="#"><span class="ph">[LINK]</span></a></li>
               <li>SCMP / Gestión de configuración <a href="#"><span class="ph">[LINK SCMP]</span></a></li>

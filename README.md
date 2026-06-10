@@ -16,10 +16,11 @@ en **GitHub Pages**.
 
 ```
 /
-├── index.html        ← Página principal (10 secciones con anchors)
-├── styles.css        ← Estilos (variables de color en :root, responsive)
-├── script.js         ← JS vanilla: menú móvil, sección activa, volver arriba
-├── README.md         ← Este archivo
+├── index.html              ← Página principal (10 secciones con anchors)
+├── styles.css              ← Estilos (variables de color en :root, responsive)
+├── script.js               ← JS vanilla: menú móvil, sección activa, volver arriba
+├── README.md               ← Este archivo
+├── REPORTE_PORTAFOLIO.md   ← Plantilla del reporte escrito (rúbrica M1) para exportar a PDF
 └── assets/
     ├── README.md                      ← Guía para reemplazar imágenes
     ├── logo-placeholder.svg
@@ -136,6 +137,7 @@ La URL será del tipo `https://nanocaballero.github.io/Synapse-Flow-Portfolio/`.
 
 ## ✅ Pendientes para el equipo (placeholders a llenar)
 
+- [ ] Exportar `REPORTE_PORTAFOLIO.md` a PDF, subirlo (Drive/eLumen) y pegar el link en el sitio (Anexos → "Reporte del portafolio (M1)")
 - [ ] `[LINK VIDEO DEMO]` — video demostrativo del producto
 - [ ] `[LINK DOCUMENTO DE REQUERIMIENTOS]`, `[LINK DOCUMENTO DE DISEÑO]`, `[LINK SCMP]`, `[LINK PLAN DE CIERRE]`
 - [ ] Objetivo general (3.5) y objetivos específicos (3.6)

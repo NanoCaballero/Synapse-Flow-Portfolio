@@ -23,11 +23,11 @@ publicar**. Marca `[x]` cuando termines cada punto.
 ## 2. Links de documentos (subir a Drive → pegar URL en el sitio, sección Anexos)
 - [ ] Documento de requerimientos / SRS → `[LINK DOCUMENTO DE REQUERIMIENTOS]`
 - [ ] Documento de diseño (M2) → en Anexos · Documentación
-- [ ] SCMP (gestión de configuración) → `[LINK SCMP]`
-- [ ] Plan de cierre del proyecto → en Anexos · Documentación
-- [ ] Plan de pruebas de aceptación (M5) → `[LINK PLAN DE PRUEBAS DE ACEPTACIÓN]` (aparece en 7.6 y Anexos)
-- [ ] Pruebas de seguridad (M5) → `[LINK PRUEBAS DE SEGURIDAD]` (aparece en 7.7 y Anexos)
-- [ ] Estudio de pruebas de usabilidad → `[LINK PRUEBAS DE USABILIDAD]` (botón en 7.3 y Anexos)
+- [x] SCMP (gestión de configuración) — ✅ enlazado
+- [x] Plan de cierre del proyecto — ✅ enlazado
+- [x] Plan de pruebas de aceptación (M5) — ✅ enlazado (carpeta de pruebas en Drive)
+- [x] Pruebas de seguridad (M5) — ✅ enlazado (carpeta de pruebas en Drive)
+- [x] Estudio de pruebas de usabilidad — ✅ enlazado (carpeta de pruebas en Drive)
 - [ ] EDT (estructura de desglose de trabajo) → `[LINK EDT]`
 
 ## 3. Diagramas (imagen o link — sección 5 y Anexos)
@@ -35,7 +35,7 @@ publicar**. Marca `[x]` cuando termines cada punto.
       ⚠️ Para M2 debe: clasificar componentes **internos por capa** (UI / Integración /
       Almacenamiento), distinguir **internos vs externos**, marcar lo **futuro** con leyenda,
       y describir la **tecnología** de cada componente. También va en el README del repo backend.
-- [ ] Diagrama de **stack tecnológico**
+- [x] Diagrama de **stack tecnológico** — ✅ enlazado
 - [ ] Diagrama de **componentes**
 - [ ] **Modelo de datos**
 - [ ] Diagrama de **deployment**
@@ -52,10 +52,11 @@ publicar**. Marca `[x]` cuando termines cada punto.
 - [ ] Minutas / seguimiento (Drive)
 
 ## 6. Evidencias de calidad (Drive)
-- [ ] Evidencia de **unit tests** (JUnit)
-- [ ] Evidencia **Selenium** (E2E)
-- [ ] Resultados de usabilidad
-- [ ] Evidencia de pruebas de seguridad
+- [x] Evidencia de **unit tests** (JUnit) — ✅ enlazado (carpeta de pruebas)
+- [x] Evidencia **Selenium** (E2E) — ✅ enlazado (carpeta de pruebas)
+- [x] Resultados de usabilidad — ✅ enlazado (carpeta de pruebas)
+- [x] Evidencia de pruebas de seguridad — ✅ enlazado (carpeta de pruebas)
+- ℹ️ Si tienen el documento individual de cada prueba, pueden enlazarlo aparte; hoy todos apuntan a la carpeta general.
 
 ## 7. Ambientes (sección 8.4)
 - [ ] URL + Estado de cada ambiente (desarrollo / pruebas / producción)

@@ -263,16 +263,15 @@ trazabilidad); T2 con un usuario parcial. Tiempo promedio por tarea ≈ 1:15.
 |---|---|
 | EDT (Estructura de Desglose de Trabajo) | 📎 PEGAR LINK |
 | Diagrama de arquitectura | 🖼️ INSERTAR / 📎 PEGAR LINK |
-| Diagrama de stack tecnológico | 🖼️ INSERTAR / 📎 PEGAR LINK |
+| Diagrama de stack tecnológico | https://drive.google.com/file/d/1zKXaIf3RwFEqGOvTlUe0myGZS6EI4o0W/view?usp=sharing |
 | Modelo de datos | 🖼️ INSERTAR / 📎 PEGAR LINK |
 | Documento de requerimientos (SRS) | 📎 PEGAR LINK |
 | Documento de diseño (M2) | 📎 PEGAR LINK |
-| SCMP — Plan de gestión de configuración | 📎 PEGAR LINK |
-| Plan de cierre del proyecto | 📎 PEGAR LINK |
-| Plan de pruebas de aceptación (M5) | 📎 PEGAR LINK |
-| Pruebas de seguridad (M5) | 📎 PEGAR LINK |
+| SCMP — Plan de gestión de configuración | https://docs.google.com/document/d/1qzfMGPEHgDA3a8VukmyRye1VlTaLrnubjHgRsBOdb6Y/edit?usp=sharing |
+| Plan de cierre del proyecto | https://docs.google.com/document/d/1YfKRfYntnG0Mau6Nd-z6EfCJOdFKl2zJCDiQ5BuV5ys/edit?usp=sharing |
+| Pruebas (usabilidad, aceptación, seguridad, unit tests, Selenium) — carpeta | https://drive.google.com/drive/folders/1q-HaXzthVJK40W8r3gsbNVot5pv1-HVv?usp=drive_link |
 | Administración del proyecto (GitHub Project / Jira / Trello) | 📎 PEGAR LINK |
-| Drive de evidencias / minutas | 📎 PEGAR LINK |
+| Drive de evidencias (sprints / minutas) | 📎 PEGAR LINK |
 | Video demo | 📎 PEGAR LINK |
 | Presentación final | https://canva.link/q8ph9rxii8e6q1n |
 | Repositorio backend | https://github.com/salog0d/Synapse-Microservices.git |

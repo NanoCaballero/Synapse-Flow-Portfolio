@@ -36,7 +36,7 @@
   --line-strong: rgba(185,140,255,.28);
   --ink: #F3EEFB;            /* texto principal (casi blanco con tinte violeta) */
   --ink-soft: #BFAEDC;       /* secundario */
-  --ink-faint: #8A789F;      /* metadatos / captions */
+  --ink-faint: #9A88B2;      /* metadatos / captions (contraste AA sobre fondo oscuro) */
 
   /* Estados (badges) — sobre fondo oscuro */
   --done: #56D6A0;     --done-bg: rgba(86,214,160,.12);
@@ -364,4 +364,43 @@ figure.media figcaption { font-family: var(--f-mono); font-size: .74rem; color: 
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
   .js .reveal { opacity: 1; transform: none; }
+}
+
+/* ---------- 11. ACCESIBILIDAD Y PULIDO ---------- */
+/* Salto al contenido (teclado / lectores de pantalla) */
+.skip-link { position: absolute; left: -999px; top: 0; z-index: 2000; background: var(--violet); color: #fff; font-family: var(--f-mono); font-size: .8rem; padding: 11px 18px; border-radius: 0 0 10px 0; }
+.skip-link:focus { left: 0; color: #fff; }
+
+/* Foco visible y consistente en toda la interfaz */
+a:focus-visible, .btn:focus-visible, .nav-toggle:focus-visible, .to-top:focus-visible, .node-chip:focus-visible, .brand:focus-visible {
+  outline: 2px solid var(--violet-bright); outline-offset: 3px; border-radius: 6px;
+}
+:focus:not(:focus-visible) { outline: none; }
+
+/* Barra de progreso de lectura (visibilidad del estado del sistema) */
+.progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; z-index: 1500; background: linear-gradient(90deg, var(--violet), var(--fuchsia)); box-shadow: 0 0 10px var(--violet); transition: width .12s linear; }
+
+/* Sistema de iconos monolínea — consistente y multiplataforma */
+.card__icon svg, .ico, .lg-ico { display: inline-block; vertical-align: middle; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.card__icon svg { width: 22px; height: 22px; }
+.ico { width: 1em; height: 1em; }
+.ico--fill { fill: currentColor; stroke: none; }
+.lg-ico { width: 17px; height: 17px; color: var(--violet-bright); flex-shrink: 0; }
+
+/* Estilos de impresión: entregable académico exportable a PDF */
+@media print {
+  body { background: #fff !important; color: #14101a; }
+  body::before, .blob, .hero::before, .section--alt::before, .to-top, .nav-toggle, .progress, .skip-link, .card::after { display: none !important; }
+  .navbar { position: static; background: #fff; border-bottom: 1px solid #ccc; height: auto; }
+  .nav-links { display: none; }
+  .section, .hero { padding: 16px 0; border-color: #ddd; page-break-inside: avoid; }
+  .card, .table-wrap, .link-group, .pipeline__step, .team-card, .node-chip, .hero__panel, .callout { box-shadow: none !important; border: 1px solid #cbb9da; background: #fff !important; color: #14101a; break-inside: avoid; }
+  h1, h2, h3, h4 { color: #14101a !important; -webkit-text-fill-color: #14101a !important; }
+  .hero h1 { background: none !important; }
+  p, td, li, .hero__desc, .section__head p, .callout p, .flow-node span { color: #2a2433 !important; }
+  a { color: #5B1699 !important; text-decoration: underline; }
+  thead th { background: #efeaf6 !important; color: #2d123f !important; }
+  .ph { background: #f3e8ff !important; color: #5B1699 !important; border-color: #b98cff; }
+  .footer { background: #fff !important; color: #14101a; border-top: 2px solid #9517F2; }
+  .footer a, .footer p, .footer ul a { color: #2a2433 !important; }
 }

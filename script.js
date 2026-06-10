@@ -44,7 +44,10 @@
         if (entry.isIntersecting) {
           var id = entry.target.id;
           Object.keys(linkMap).forEach(function (k) {
-            linkMap[k].classList.toggle("active", k === id);
+            var on = k === id;
+            linkMap[k].classList.toggle("active", on);
+            if (on) { linkMap[k].setAttribute("aria-current", "true"); }
+            else { linkMap[k].removeAttribute("aria-current"); }
           });
         }
       });
@@ -93,7 +96,25 @@
     });
   }
 
-  /* ---------- 5. Año dinámico en el footer ---------- */
+  /* ---------- 5. Barra de progreso de lectura ---------- */
+  var bar = document.querySelector(".progress");
+  if (bar) {
+    var updateBar = function () {
+      var h = document.documentElement;
+      var max = h.scrollHeight - h.clientHeight;
+      bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + "%";
+    };
+    window.addEventListener("scroll", updateBar, { passive: true });
+    window.addEventListener("resize", updateBar);
+    updateBar();
+  }
+
+  /* ---------- 6. Ocultar elementos decorativos a lectores de pantalla ---------- */
+  document.querySelectorAll(
+    ".node-chip .dot, .hero__badge .dot, .flow-connector, .pipeline__arrow, .diagram__connector"
+  ).forEach(function (el) { el.setAttribute("aria-hidden", "true"); });
+
+  /* ---------- 7. Año dinámico en el footer ---------- */
   var yearEl = document.querySelector("[data-year]");
   if (yearEl) { yearEl.textContent = String(new Date().getFullYear()); }
 })();

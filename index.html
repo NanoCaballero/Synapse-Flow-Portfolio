@@ -9,6 +9,16 @@
   <meta name="theme-color" content="#0C0714" />
   <link rel="icon" type="image/svg+xml" href="assets/logo-placeholder.svg" />
 
+  <!-- Open Graph / redes sociales (al compartir el enlace del portafolio) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Synapse-Flow · Intelligent Agent Orchestration Platform" />
+  <meta property="og:description" content="Portafolio final del equipo Fantasy Labs para Banorte — reto académico del Tecnológico de Monterrey." />
+  <meta property="og:image" content="assets/logo-placeholder.svg" />
+  <meta property="og:locale" content="es_MX" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Synapse-Flow · Fantasy Labs" />
+  <meta name="twitter:description" content="Plataforma de orquestación de agentes de IA. Portafolio final del reto académico." />
+
   <!-- Tipografía editorial · Google Fonts (display + body + serif de acento + monospace) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,6 +27,10 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- Accesibilidad: salto al contenido + barra de progreso de lectura -->
+  <a class="skip-link" href="#inicio">Saltar al contenido</a>
+  <div class="progress" role="presentation" aria-hidden="true"></div>
 
   <!-- ===================== NAVBAR ===================== -->
   <header class="navbar">
@@ -69,7 +83,7 @@
               <a class="btn btn--outline" href="https://github.com/salog0d/Synapse-Microservices.git" target="_blank" rel="noopener">GitHub Backend</a>
               <a class="btn btn--outline" href="https://github.com/aleordaz1130/Synapse-Frontend.git" target="_blank" rel="noopener">GitHub Frontend</a>
               <!-- EDITAR: reemplazar # con el enlace del video demo -->
-              <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">▶ Video demo <span class="ph">[LINK VIDEO DEMO]</span></a>
+              <a class="btn btn--ghost" href="#" target="_blank" rel="noopener"><svg class="ico ico--fill" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 4l14 8-14 8z"/></svg> Video demo <span class="ph">[LINK VIDEO DEMO]</span></a>
             </div>
           </div>
 
@@ -120,22 +134,22 @@
 
         <div class="grid grid--4">
           <article class="card">
-            <div class="card__icon">⬡</div>
+            <div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3l7.5 4.5v9L12 21l-7.5-4.5v-9z"/><circle cx="12" cy="12" r="2.3"/></svg></div>
             <h3>Orquestación de agentes</h3>
             <p>Coordina agentes de IA, herramientas y decisiones dentro de un mismo flujo visual.</p>
           </article>
           <article class="card">
-            <div class="card__icon">▣</div>
+            <div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3l8 4.5-8 4.5-8-4.5z"/><path d="M4 12l8 4.5 8-4.5M4 16l8 4.5 8-4.5"/></svg></div>
             <h3>Arquitectura enterprise</h3>
             <p>Microservicios desacoplados con seguridad, configuración centralizada y observabilidad.</p>
           </article>
           <article class="card">
-            <div class="card__icon">✦</div>
+            <div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2.5l2.3 7.2L21.5 12l-7.2 2.3L12 21.5 9.7 14.3 2.5 12l7.2-2.3z"/></svg></div>
             <h3>IA aplicada</h3>
             <p>Google ADK + Gemini, RAG con embeddings y ejecución de código en sandbox.</p>
           </article>
           <article class="card">
-            <div class="card__icon">✓</div>
+            <div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.4 12.4l2.4 2.4 4.8-5.2"/></svg></div>
             <h3>Calidad y despliegue</h3>
             <p>Pruebas unitarias, E2E, CI/CD y despliegue contenerizado preparado para producción.</p>
           </article>
@@ -199,22 +213,22 @@
         <h3 class="subhead">3.4 Usuarios objetivo</h3>
         <div class="grid grid--4">
           <article class="card">
-            <div class="card__icon">⚙</div>
+            <div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M21.5 12h-3M5.5 12h-3M18.36 5.64l-2.12 2.12M7.76 16.24l-2.12 2.12M18.36 18.36l-2.12-2.12M7.76 7.76 5.64 5.64"/></svg></div>
             <h3>Usuarios técnicos</h3>
             <p>Configuran nodos, integraciones, workflows y herramientas.</p>
           </article>
           <article class="card">
-            <div class="card__icon">◷</div>
+            <div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/></svg></div>
             <h3>Usuarios de negocio</h3>
             <p>Supervisan, ejecutan o validan procesos.</p>
           </article>
           <article class="card">
-            <div class="card__icon">⛁</div>
+            <div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M9.3 12l1.9 1.9 3.5-3.7"/></svg></div>
             <h3>Administradores</h3>
             <p>Gestionan usuarios, roles, permisos y trazabilidad.</p>
           </article>
           <article class="card">
-            <div class="card__icon">☑</div>
+            <div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="16" rx="2"/><path d="M9 5V3h6v2M9 13l2 2 4-4"/></svg></div>
             <h3>Auditoría / operación</h3>
             <p>Revisan logs, historial y resultados de ejecución.</p>
           </article>
@@ -301,14 +315,14 @@
 
         <h3 class="subhead">4.4 Historias de usuario</h3>
         <div class="grid grid--4">
-          <article class="card"><div class="card__icon">🔑</div><h3>HU-01</h3><p>Como usuario, quiero iniciar sesión para acceder a la plataforma de forma segura.</p></article>
-          <article class="card"><div class="card__icon">⬡</div><h3>HU-02</h3><p>Como usuario técnico, quiero crear nodos reutilizables para construir workflows.</p></article>
-          <article class="card"><div class="card__icon">⤳</div><h3>HU-03</h3><p>Como usuario técnico, quiero conectar nodos visualmente para definir el flujo de ejecución.</p></article>
-          <article class="card"><div class="card__icon">▶</div><h3>HU-04</h3><p>Como usuario, quiero ejecutar workflows para obtener resultados de agentes de IA.</p></article>
-          <article class="card"><div class="card__icon">⛁</div><h3>HU-05</h3><p>Como administrador, quiero gestionar usuarios y roles para controlar permisos.</p></article>
-          <article class="card"><div class="card__icon">☑</div><h3>HU-06</h3><p>Como usuario, quiero consultar historial y auditoría para revisar ejecuciones.</p></article>
-          <article class="card"><div class="card__icon">✦</div><h3>HU-07</h3><p>Como usuario técnico, quiero usar nodos RAG para consultar documentos como contexto.</p></article>
-          <article class="card"><div class="card__icon">{}</div><h3>HU-08</h3><p>Como usuario técnico, quiero ejecutar código en sandbox para agregar lógica personalizada.</p></article>
+          <article class="card"><div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M10.8 12.2 20 3M16.5 6.5 19 9M14 9 16 11"/></svg></div><h3>HU-01</h3><p>Como usuario, quiero iniciar sesión para acceder a la plataforma de forma segura.</p></article>
+          <article class="card"><div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3l7.5 4.5v9L12 21l-7.5-4.5v-9z"/><circle cx="12" cy="12" r="2.3"/></svg></div><h3>HU-02</h3><p>Como usuario técnico, quiero crear nodos reutilizables para construir workflows.</p></article>
+          <article class="card"><div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M8.4 6h7.2M8 8l8 8"/></svg></div><h3>HU-03</h3><p>Como usuario técnico, quiero conectar nodos visualmente para definir el flujo de ejecución.</p></article>
+          <article class="card"><div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l6 3.5-6 3.5z" fill="currentColor" stroke="none"/></svg></div><h3>HU-04</h3><p>Como usuario, quiero ejecutar workflows para obtener resultados de agentes de IA.</p></article>
+          <article class="card"><div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M9.3 12l1.9 1.9 3.5-3.7"/></svg></div><h3>HU-05</h3><p>Como administrador, quiero gestionar usuarios y roles para controlar permisos.</p></article>
+          <article class="card"><div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="16" rx="2"/><path d="M9 5V3h6v2M9 13l2 2 4-4"/></svg></div><h3>HU-06</h3><p>Como usuario, quiero consultar historial y auditoría para revisar ejecuciones.</p></article>
+          <article class="card"><div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2.5l2.3 7.2L21.5 12l-7.2 2.3L12 21.5 9.7 14.3 2.5 12l7.2-2.3z"/></svg></div><h3>HU-07</h3><p>Como usuario técnico, quiero usar nodos RAG para consultar documentos como contexto.</p></article>
+          <article class="card"><div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 7l-4 5 4 5M16 7l4 5-4 5M13.5 5.5l-3 13"/></svg></div><h3>HU-08</h3><p>Como usuario técnico, quiero ejecutar código en sandbox para agregar lógica personalizada.</p></article>
         </div>
 
         <div class="btn-row" style="margin-top: var(--sp-4);">
@@ -526,21 +540,21 @@
 
         <div class="grid grid--3" style="margin-top: var(--sp-3);">
           <article class="card">
-            <div class="card__icon">✦</div>
+            <div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2.5l2.3 7.2L21.5 12l-7.2 2.3L12 21.5 9.7 14.3 2.5 12l7.2-2.3z"/></svg></div>
             <h3>6.4 Google ADK</h3>
             <p>Google ADK se usa como motor de ejecución de agentes. Permite transformar la definición
               visual del workflow en una lógica ejecutable, integrando agentes, herramientas, modelos y flujos.
               Su valor principal es facilitar el trabajo con agentes y ofrecer agnosticismo de despliegue y de modelos.</p>
           </article>
           <article class="card">
-            <div class="card__icon">⌕</div>
+            <div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M15.8 15.8 20.5 20.5"/></svg></div>
             <h3>6.5 RAG</h3>
             <p>El módulo RAG permite recuperar contexto desde documentos usando embeddings y búsqueda
               semántica. Los documentos se procesan para generar vectores que se almacenan en PostgreSQL con
               pgvector. Esto permite que los agentes consulten información relevante antes de generar respuestas.</p>
           </article>
           <article class="card">
-            <div class="card__icon">{}</div>
+            <div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 7l-4 5 4 5M16 7l4 5-4 5M13.5 5.5l-3 13"/></svg></div>
             <h3>6.6 Sandbox de código</h3>
             <p>Los nodos de código se ejecutan en un entorno aislado mediante contenedores Docker efímeros.
               Esto reduce riesgos al limitar recursos, permisos y acceso del código ejecutado.</p>
@@ -710,14 +724,14 @@
 
         <h3 class="subhead">9.1 Resultados obtenidos</h3>
         <div class="grid grid--4">
-          <article class="card"><div class="card__icon">⬡</div><p>Plataforma visual para workflows de agentes.</p></article>
-          <article class="card"><div class="card__icon">▣</div><p>Arquitectura de microservicios implementada.</p></article>
-          <article class="card"><div class="card__icon">🔑</div><p>Seguridad con JWT y roles.</p></article>
-          <article class="card"><div class="card__icon">✦</div><p>Integración de IA con Google ADK y Gemini.</p></article>
-          <article class="card"><div class="card__icon">⌕</div><p>RAG con embeddings y búsqueda semántica.</p></article>
-          <article class="card"><div class="card__icon">{}</div><p>Ejecución de código en sandbox.</p></article>
-          <article class="card"><div class="card__icon">✓</div><p>Pruebas y evidencias de calidad.</p></article>
-          <article class="card"><div class="card__icon">▤</div><p>Documentación técnica y repositorios.</p></article>
+          <article class="card"><div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3l7.5 4.5v9L12 21l-7.5-4.5v-9z"/><circle cx="12" cy="12" r="2.3"/></svg></div><p>Plataforma visual para workflows de agentes.</p></article>
+          <article class="card"><div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3l8 4.5-8 4.5-8-4.5z"/><path d="M4 12l8 4.5 8-4.5M4 16l8 4.5 8-4.5"/></svg></div><p>Arquitectura de microservicios implementada.</p></article>
+          <article class="card"><div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M10.8 12.2 20 3M16.5 6.5 19 9M14 9 16 11"/></svg></div><p>Seguridad con JWT y roles.</p></article>
+          <article class="card"><div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2.5l2.3 7.2L21.5 12l-7.2 2.3L12 21.5 9.7 14.3 2.5 12l7.2-2.3z"/></svg></div><p>Integración de IA con Google ADK y Gemini.</p></article>
+          <article class="card"><div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M15.8 15.8 20.5 20.5"/></svg></div><p>RAG con embeddings y búsqueda semántica.</p></article>
+          <article class="card"><div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 7l-4 5 4 5M16 7l4 5-4 5M13.5 5.5l-3 13"/></svg></div><p>Ejecución de código en sandbox.</p></article>
+          <article class="card"><div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.4 12.4l2.4 2.4 4.8-5.2"/></svg></div><p>Pruebas y evidencias de calidad.</p></article>
+          <article class="card"><div class="card__icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></div><p>Documentación técnica y repositorios.</p></article>
         </div>
 
         <div class="two-col" style="margin-top: var(--sp-4);">
@@ -793,7 +807,7 @@
         <!-- EDITAR: en TODO este bloque sustituye los href="#" y los [PLACEHOLDER] por links reales -->
         <div class="grid grid--3">
           <div class="link-group">
-            <h3>📄 Documentación</h3>
+            <h3><svg class="lg-ico" aria-hidden="true" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg> Documentación</h3>
             <ul>
               <li>Documento de requerimientos <a href="#"><span class="ph">[LINK]</span></a></li>
               <li>Documento de diseño <a href="#"><span class="ph">[LINK]</span></a></li>
@@ -806,12 +820,12 @@
           </div>
 
           <div class="link-group">
-            <h3>💻 Repositorios</h3>
+            <h3><svg class="lg-ico" aria-hidden="true" viewBox="0 0 24 24"><path d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg> Repositorios</h3>
             <ul>
               <li>Backend <a href="https://github.com/salog0d/Synapse-Microservices.git" target="_blank" rel="noopener">GitHub ↗</a></li>
               <li>Frontend <a href="https://github.com/aleordaz1130/Synapse-Frontend.git" target="_blank" rel="noopener">GitHub ↗</a></li>
             </ul>
-            <h3 style="margin-top: var(--sp-3);">🎬 Presentación y demo</h3>
+            <h3 style="margin-top: var(--sp-3);"><svg class="lg-ico" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l6 3.5-6 3.5z" fill="currentColor" stroke="none"/></svg> Presentación y demo</h3>
             <ul>
               <li>Presentación final <a href="https://canva.link/q8ph9rxii8e6q1n" target="_blank" rel="noopener">Canva ↗</a></li>
               <li>Video demo <a href="#"><span class="ph">[LINK VIDEO DEMO]</span></a></li>
@@ -820,7 +834,7 @@
           </div>
 
           <div class="link-group">
-            <h3>📌 Gestión del proyecto</h3>
+            <h3><svg class="lg-ico" aria-hidden="true" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 4v7M15 4v11"/></svg> Gestión del proyecto</h3>
             <ul>
               <li>Backlog / GitHub Project / Jira <a href="#"><span class="ph">[LINK]</span></a></li>
               <li>EDT <a href="#"><span class="ph">[LINK EDT]</span></a></li>
@@ -830,7 +844,7 @@
           </div>
 
           <div class="link-group">
-            <h3>🗺 Diagramas</h3>
+            <h3><svg class="lg-ico" aria-hidden="true" viewBox="0 0 24 24"><path d="M9 4 4 6v14l5-2 6 2 5-2V4l-5 2-6-2zM9 4v14M15 6v14"/></svg> Diagramas</h3>
             <ul>
               <li>Arquitectura <a href="#"><span class="ph">[LINK]</span></a></li>
               <li>Stack tecnológico <a href="#"><span class="ph">[LINK]</span></a></li>
@@ -841,7 +855,7 @@
           </div>
 
           <div class="link-group">
-            <h3>🧪 Calidad</h3>
+            <h3><svg class="lg-ico" aria-hidden="true" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M7.5 15h9"/></svg> Calidad</h3>
             <ul>
               <li>Evidencia de pruebas unitarias <a href="#"><span class="ph">[LINK]</span></a></li>
               <li>Evidencia Selenium <a href="#"><span class="ph">[LINK]</span></a></li>
@@ -851,7 +865,7 @@
           </div>
 
           <div class="link-group">
-            <h3>▶ Video demo</h3>
+            <h3><svg class="lg-ico" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10 8.5l6 3.5-6 3.5z" fill="currentColor" stroke="none"/></svg> Video demo</h3>
             <figure class="media" style="margin:0;">
               <!-- EDITAR: reemplaza el placeholder por una miniatura o enlaza el video -->
               <a href="#"><img src="assets/demo-placeholder.svg" alt="Placeholder del video demo de Synapse-Flow" /></a>

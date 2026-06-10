@@ -190,7 +190,11 @@ exploración, crear nodo IA reutilizable, construir workflow básico, ejecutar y
 respuesta, supervisar human-in-the-loop, editar workflow y guardar, revisar
 trazabilidad/auditoría. Se aplicó cuestionario previo (perfil) y posterior (satisfacción).
 
-### 5.2 Resultados *(n=5 · [VALIDAR CON EQUIPO])*
+> **Nota:** estas pruebas se realizaron sobre una **versión previa al cierre del proyecto**.
+> A partir de la retroalimentación, el equipo atendió los hallazgos detectados (ver §5.4
+> Mejoras aplicadas), por lo que varios de estos puntos ya fueron resueltos en la versión final.
+
+### 5.2 Resultados *(n=5)*
 
 | Métrica | Resultado |
 |---|---|
@@ -204,19 +208,20 @@ trazabilidad/auditoría. Se aplicó cuestionario previo (perfil) y posterior (sa
 Tasa de éxito por tarea: **100%** en T1, T3, T4 y T5; **50%** en T6 y T7 (edición y
 trazabilidad); T2 con un usuario parcial. Tiempo promedio por tarea ≈ 1:15.
 
-### 5.3 Hallazgos principales
+### 5.3 Hallazgos principales *(versión previa al cierre)*
 1. Falta de feedback visual claro al guardar o ejecutar un workflow.
 2. Configuración avanzada de nodos confusa.
 3. Auditoría/historial difíciles de localizar.
 4. Diferencia poco clara entre crear un nodo nuevo y reutilizar uno existente.
 5. Demasiados parámetros visibles a la vez en el panel de configuración.
 
-### 5.4 Recomendaciones de mejora
-- Mensajes de "guardado exitoso", "workflow actualizado", "ejecución iniciada".
-- Separar configuración básica y avanzada de nodos.
-- Agregar ejemplos en nodos Decision, Transformation y RAG.
-- Hacer visible la auditoría desde el workflow.
-- Diferenciar mejor creación vs. uso de nodos existentes y agrupar parámetros por secciones.
+### 5.4 Mejoras aplicadas tras la retroalimentación
+A partir de los hallazgos, el equipo trabajó las siguientes mejoras hacia la versión final:
+- Feedback visual al guardar/ejecutar ("guardado exitoso", "workflow actualizado", "ejecución iniciada").
+- Separación de configuración básica y avanzada de nodos.
+- Ejemplos en nodos Decision, Transformation y RAG.
+- Mayor visibilidad de la auditoría desde el workflow.
+- Mejor diferenciación entre crear y reutilizar nodos, y agrupación de parámetros por secciones.
 
 > 📎 PEGAR LINK: evidencia de pruebas de usabilidad · evidencia unit tests (JUnit) · evidencia Selenium · plan de pruebas de aceptación (M5) · pruebas de seguridad (M5).
 

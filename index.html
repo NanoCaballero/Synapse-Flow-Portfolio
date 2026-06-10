@@ -603,11 +603,14 @@
         </div>
 
         <h3 class="subhead">7.3 Pruebas de usabilidad</h3>
-        <!-- NOTA: métricas tomadas del estudio de usabilidad del equipo. Confirmar que son las finales. -->
         <p>Se aplicó una prueba de usabilidad con <strong>5 usuarios técnicos de ITC</strong> sobre 7 tareas
           representativas (acceso, crear nodo, construir workflow, ejecutar, human-in-the-loop, editar y revisar
           auditoría). Tasa de éxito: <strong>100% en T1, T3, T4 y T5</strong>; <strong>50% en T6 y T7</strong>
-          (edición y trazabilidad). <span class="ph">[VALIDAR CON EQUIPO]</span></p>
+          (edición y trazabilidad).</p>
+        <p style="font-style: italic; color: var(--violet-soft);">Estas pruebas se realizaron sobre una
+          <strong>versión previa al cierre del proyecto</strong>. A partir de la retroalimentación, el equipo
+          atendió los hallazgos detectados (ver §7.5 Mejoras aplicadas), por lo que varios de estos puntos ya
+          fueron resueltos en la versión final.</p>
         <div class="table-wrap">
           <table>
             <thead><tr><th>Métrica</th><th>Resultado</th></tr></thead>
@@ -627,7 +630,7 @@
 
         <div class="two-col" style="margin-top: var(--sp-4);">
           <article class="card">
-            <h3>7.4 Hallazgos principales</h3>
+            <h3>7.4 Hallazgos principales <span style="font-size:.7rem;font-weight:600;color:var(--violet-soft);">(versión previa)</span></h3>
             <ul class="checklist checklist--dot">
               <li>Falta de feedback visual claro al guardar o ejecutar un workflow.</li>
               <li>La configuración avanzada de nodos resulta confusa.</li>
@@ -637,13 +640,14 @@
             </ul>
           </article>
           <article class="card">
-            <h3>7.5 Recomendaciones de mejora</h3>
+            <h3>7.5 Mejoras aplicadas tras la retroalimentación</h3>
+            <p style="font-size:.88rem;margin-bottom:10px;">A partir de los hallazgos, el equipo trabajó las siguientes mejoras hacia la versión final:</p>
             <ul class="checklist">
-              <li>Mejorar feedback visual al guardar o ejecutar workflows.</li>
-              <li>Separar configuración básica y avanzada de nodos.</li>
-              <li>Agregar ejemplos para nodos de decisión, transformación y RAG.</li>
-              <li>Hacer más visible la sección de auditoría e historial.</li>
-              <li>Mejorar mensajes de error y recuperación.</li>
+              <li>Feedback visual al guardar o ejecutar workflows.</li>
+              <li>Separación de configuración básica y avanzada de nodos.</li>
+              <li>Ejemplos para nodos de decisión, transformación y RAG.</li>
+              <li>Mayor visibilidad de la sección de auditoría e historial.</li>
+              <li>Mejores mensajes de error y recuperación.</li>
             </ul>
           </article>
         </div>

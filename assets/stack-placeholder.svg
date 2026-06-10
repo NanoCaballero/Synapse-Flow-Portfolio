@@ -1,23 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="320" viewBox="0 0 720 320" role="img" aria-label="Mosaico placeholder del stack tecnológico de Synapse-Flow">
-  <rect width="720" height="320" rx="20" fill="#2D123F"/>
-  <g font-family="Arial, sans-serif" text-anchor="middle" font-size="13" fill="#2D123F">
-    <text x="360" y="40" font-size="18" font-weight="bold" fill="#F3E8FF">Stack Tecnológico</text>
-    <g>
-      <rect x="40"  y="70"  width="150" height="56" rx="12" fill="#F3E8FF"/><text x="115" y="103">Spring Boot</text>
-      <rect x="205" y="70"  width="150" height="56" rx="12" fill="#F3E8FF"/><text x="280" y="103">React + Vite</text>
-      <rect x="370" y="70"  width="150" height="56" rx="12" fill="#F3E8FF"/><text x="445" y="103">PostgreSQL</text>
-      <rect x="535" y="70"  width="145" height="56" rx="12" fill="#F3E8FF"/><text x="607" y="103">pgvector</text>
+  <rect width="720" height="320" rx="20" fill="#0F0819" stroke="#2E1F45" stroke-width="1.5"/>
+  <g font-family="'JetBrains Mono', monospace" text-anchor="middle" font-size="12.5">
+    <text x="360" y="42" font-family="'Bricolage Grotesque', sans-serif" font-size="18" font-weight="bold" fill="#F3EEFB">Stack Tecnológico</text>
+    <g fill="#E8DEFA">
+      <rect x="40"  y="70"  width="150" height="56" rx="12" fill="#160D27" stroke="#3A2A55"/><text x="115" y="103">Spring Boot</text>
+      <rect x="205" y="70"  width="150" height="56" rx="12" fill="#160D27" stroke="#3A2A55"/><text x="280" y="103">React + Vite</text>
+      <rect x="370" y="70"  width="150" height="56" rx="12" fill="#160D27" stroke="#3A2A55"/><text x="445" y="103">PostgreSQL</text>
+      <rect x="535" y="70"  width="145" height="56" rx="12" fill="#160D27" stroke="#3A2A55"/><text x="607" y="103">pgvector</text>
 
-      <rect x="40"  y="142" width="150" height="56" rx="12" fill="#E5D1FF"/><text x="115" y="175">Google ADK</text>
-      <rect x="205" y="142" width="150" height="56" rx="12" fill="#E5D1FF"/><text x="280" y="175">Gemini 2.5</text>
-      <rect x="370" y="142" width="150" height="56" rx="12" fill="#E5D1FF"/><text x="445" y="175">Docker</text>
-      <rect x="535" y="142" width="145" height="56" rx="12" fill="#E5D1FF"/><text x="607" y="175">Redis</text>
+      <rect x="40"  y="142" width="150" height="56" rx="12" fill="#1E1334" stroke="#4A2F72"/><text x="115" y="175" fill="#CDB2FF">Google ADK</text>
+      <rect x="205" y="142" width="150" height="56" rx="12" fill="#1E1334" stroke="#4A2F72"/><text x="280" y="175" fill="#CDB2FF">Gemini 2.5</text>
+      <rect x="370" y="142" width="150" height="56" rx="12" fill="#1E1334" stroke="#4A2F72"/><text x="445" y="175" fill="#CDB2FF">Docker</text>
+      <rect x="535" y="142" width="145" height="56" rx="12" fill="#1E1334" stroke="#4A2F72"/><text x="607" y="175" fill="#CDB2FF">Redis</text>
 
       <rect x="40"  y="214" width="150" height="56" rx="12" fill="#9517F2"/><text x="115" y="247" fill="#FFFFFF">Grafana</text>
       <rect x="205" y="214" width="150" height="56" rx="12" fill="#9517F2"/><text x="280" y="247" fill="#FFFFFF">Prometheus</text>
       <rect x="370" y="214" width="150" height="56" rx="12" fill="#9517F2"/><text x="445" y="247" fill="#FFFFFF">Loki · Tempo</text>
       <rect x="535" y="214" width="145" height="56" rx="12" fill="#9517F2"/><text x="607" y="247" fill="#FFFFFF">GH Actions</text>
     </g>
-    <text x="360" y="300" font-size="12" fill="#E5D1FF">STACK PLACEHOLDER · reemplazar con diagrama oficial del stack</text>
+    <text x="360" y="300" font-size="11" fill="#8A789F">STACK PLACEHOLDER · reemplazar con diagrama oficial del stack</text>
   </g>
 </svg>

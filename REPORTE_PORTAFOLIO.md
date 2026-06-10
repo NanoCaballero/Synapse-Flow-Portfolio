@@ -222,6 +222,7 @@ A partir de los hallazgos, el equipo trabajó las siguientes mejoras hacia la ve
 - Ejemplos en nodos Decision, Transformation y RAG.
 - Mayor visibilidad de la auditoría desde el workflow.
 - Mejor diferenciación entre crear y reutilizar nodos, y agrupación de parámetros por secciones.
+- **Tutorial de uso de la aplicación** para guiar a nuevos usuarios.
 
 > 📎 PEGAR LINK: evidencia de pruebas de usabilidad · evidencia unit tests (JUnit) · evidencia Selenium · plan de pruebas de aceptación (M5) · pruebas de seguridad (M5).
 

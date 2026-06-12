@@ -45,16 +45,12 @@ publicar**. Marca `[x]` cuando termines cada punto.
 - [x] **Video demo** de la aplicación — ✅ enlazado (carpeta de videos, en hero, Anexos y tarjeta de video)
 - [ ] **Demo en vivo / ambiente desplegado** (URL) → `[LINK DEPLOYMENT / AMBIENTE]`
 - [x] Presentación final (Canva) — ya está
-- [ ] ⚠️ **Repositorios backend y frontend** — VERIFICAR cuáles son los correctos (ver nota abajo)
+- [x] Repositorios backend y frontend — ✅ confirmados (Synapse-Microservices / Synapse-Frontend)
 
 ## 5. Gestión del proyecto
 - [x] Backlog (**Jira**) — ✅ enlazado
 - [ ] Evidencia de sprints (Drive)
 - [ ] Minutas / seguimiento (Drive)
-
-> ⚠️ **OJO — repos:** el reporte final lista `salog0d/AgentOrchestation-Plattform` (backend) y
-> `aleordaz1130/FantasyLab/tree/Security` (frontend), pero el sitio usa `Synapse-Microservices` y
-> `Synapse-Frontend`. Confirmen cuáles son los correctos y avisen para actualizarlos en todo el sitio.
 
 ## 6. Evidencias de calidad (Drive)
 - [x] Evidencia de **unit tests** (JUnit) — ✅ enlazado (carpeta de pruebas)

@@ -20,7 +20,7 @@ publicar**. Marca `[x]` cuando termines cada punto.
 - ℹ️ `REPORTE_PORTAFOLIO.md` queda como plantilla de apoyo opcional (ya tienen el reporte real).
 
 ## 2. Links de documentos (subir a Drive → pegar URL en el sitio, sección Anexos)
-- [ ] Documento de requerimientos / SRS → `[LINK DOCUMENTO DE REQUERIMIENTOS]`
+- [x] Documento de requerimientos / SRS — ✅ enlazado
 - [ ] Documento de diseño (M2) → en Anexos · Documentación
 - [x] SCMP (gestión de configuración) — ✅ enlazado
 - [x] Plan de cierre del proyecto — ✅ enlazado

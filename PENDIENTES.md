@@ -49,8 +49,6 @@ publicar**. Marca `[x]` cuando termines cada punto.
 
 ## 5. Gestión del proyecto
 - [x] Backlog (**Jira**) — ✅ enlazado
-- [ ] Evidencia de sprints (Drive)
-- [ ] Minutas / seguimiento (Drive)
 
 ## 6. Evidencias de calidad (Drive)
 - [x] Evidencia de **unit tests** (JUnit) — ✅ enlazado (carpeta de pruebas)

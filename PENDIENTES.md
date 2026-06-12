@@ -16,9 +16,8 @@ publicar**. Marca `[x]` cuando termines cada punto.
       `https://nanocaballero.github.io/Synapse-Flow-Portfolio/`
 
 ## 1. Reporte M1 (documento escrito)
-- [ ] Llenar `REPORTE_PORTAFOLIO.md` (marcadores `📎 PEGAR LINK`, `🖼️ INSERTAR DIAGRAMA`, `[VALIDAR CON EQUIPO]`)
-- [ ] Exportar a **PDF** (VS Code: extensión *Markdown PDF*, o `pandoc`)
-- [ ] Subir el PDF a Drive y pegar el link en el sitio → busca `[LINK DOCUMENTO DE REPORTE]`
+- [x] **Reporte final** (Google Doc del equipo) — ✅ enlazado en Anexos · Documentación
+- ℹ️ `REPORTE_PORTAFOLIO.md` queda como plantilla de apoyo opcional (ya tienen el reporte real).
 
 ## 2. Links de documentos (subir a Drive → pegar URL en el sitio, sección Anexos)
 - [ ] Documento de requerimientos / SRS → `[LINK DOCUMENTO DE REQUERIMIENTOS]`
@@ -43,15 +42,19 @@ publicar**. Marca `[x]` cuando termines cada punto.
 - ℹ️ Todos los diagramas apuntan a la carpeta general; si quieren, enlacen cada uno individual.
 
 ## 4. Demo y media
-- [ ] **Video demo** de la aplicación → `[LINK VIDEO DEMO]` (aparece en 3 lugares: hero, sección Anexos y tarjeta de video)
+- [x] **Video demo** de la aplicación — ✅ enlazado (carpeta de videos, en hero, Anexos y tarjeta de video)
 - [ ] **Demo en vivo / ambiente desplegado** (URL) → `[LINK DEPLOYMENT / AMBIENTE]`
 - [x] Presentación final (Canva) — ya está
-- [x] Repositorios backend y frontend — ya están
+- [ ] ⚠️ **Repositorios backend y frontend** — VERIFICAR cuáles son los correctos (ver nota abajo)
 
 ## 5. Gestión del proyecto
-- [ ] Backlog / **GitHub Project / Jira / Trello** (con historias de usuario)
-- [ ] Evidencia de sprints (Drive) → `[LINK DRIVE DE EVIDENCIAS]`
+- [x] Backlog (**Jira**) — ✅ enlazado
+- [ ] Evidencia de sprints (Drive)
 - [ ] Minutas / seguimiento (Drive)
+
+> ⚠️ **OJO — repos:** el reporte final lista `salog0d/AgentOrchestation-Plattform` (backend) y
+> `aleordaz1130/FantasyLab/tree/Security` (frontend), pero el sitio usa `Synapse-Microservices` y
+> `Synapse-Frontend`. Confirmen cuáles son los correctos y avisen para actualizarlos en todo el sitio.
 
 ## 6. Evidencias de calidad (Drive)
 - [x] Evidencia de **unit tests** (JUnit) — ✅ enlazado (carpeta de pruebas)

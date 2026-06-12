@@ -27,7 +27,7 @@ publicar**. Marca `[x]` cuando termines cada punto.
 - [x] Plan de pruebas de aceptación (M5) — ✅ enlazado (carpeta de pruebas en Drive)
 - [x] Pruebas de seguridad (M5) — ✅ enlazado (carpeta de pruebas en Drive)
 - [x] Estudio de pruebas de usabilidad — ✅ enlazado (carpeta de pruebas en Drive)
-- [ ] EDT (estructura de desglose de trabajo) → `[LINK EDT]`
+- [x] EDT (estructura de desglose de trabajo) — ✅ enlazado (Miro)
 
 ## 3. Diagramas (imagen o link — sección 5 y Anexos)
 - [x] Diagrama de **arquitectura** — ✅ enlazado (carpeta de diagramas)
